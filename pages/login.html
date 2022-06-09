@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <title>Log in</title>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cod'ons Heberg, solution d'hébergement pour tous.">
+    <meta name="author" content="Ezequiel FRIDEL ESCALONA">
+
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/login.css">
+
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+
+    <main class="">
+        <div class="forms">
+            <div class="login">
+                <div class="circle"></div>
+
+                <div class="form-container">
+                    <h1>Connexion</h1>
+
+                    <form class="form-content">
+                        <div class="input-box">
+                            <input type="text" name="username" id="username" placeholder="Nom d'utilisateur ou email" autocomplete="username" required>
+
+                            <label for="username">
+                                Nom d'utilisateur / email
+                            </label>
+                        </div>
+
+                        <div class="input-box input-password">
+                            <input type="password" name="password" id="password" placeholder="Mot de passe" data-type="password" autocomplete="current-password" required>
+
+                            <button class="password-visibility" id="toggle-visibility" type="button">
+                                <img src="../assets/images/eye.svg" data-alternative-src="../assets/images/eye-slash.svg" alt="Show Password">
+                            </button>
+
+                            <label for="password">
+                                Mot de passe
+                            </label>
+                        </div>
+
+                        <div class="remember-me">
+                            <input type="checkbox" name="remember-me" id="remember-me">
+
+                            <label for="remember-me">
+                                Se souvenir de moi
+                                <a href="#" style="--c: '?';">?</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span class="submit-content">
+                                Se connecter
+                            </span>
+
+                            <div class="loading">
+                                <img src="../assets/images/loading-part.svg" alt="Loading">
+                                <img src="../assets/images/loading-part.svg" alt="Loading">
+                            </div>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="alternative">
+                    <div class="content">
+                        <p>Vous êtes nouveau dans<br>notre communauté ?</p>
+
+                        <button type="button" class="toggle-form">
+                            S'inscrire
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="register">
+                <div class="form-container">
+                    <h1>Inscription</h1>
+
+                    <form class="form-content">
+                        <div class="input-box">
+                            <input type="text" name="r-username" id="r-username" placeholder="Nom d'utilisateur" autocomplete="username" required>
+
+                            <label for="r-username">
+                                Nom d'utilisateur
+                            </label>
+                        </div>
+
+                        <div class="input-box">
+                            <input type="email" name="email" id="email" placeholder="Adresse mail" autocomplete="email" required>
+
+                            <label for="email">
+                                Adresse mail
+                            </label>
+                        </div>
+
+                        <div class="input-box input-password">
+                            <input type="password" name="password" id="passwd-1" placeholder="Mot de passe" data-type="password" autocomplete="new-password" required>
+
+                            <label for="passwd-1">
+                                Mot de passe
+                            </label>
+                        </div>
+
+                        <div class="input-box input-password">
+                            <input type="password" name="confirm-password" id="passwd-2" placeholder="Mot de passe" data-type="password" autocomplete="new-password" required>
+
+                            <label for="passwd-2">
+                                Confirmation mot de passe
+                            </label>
+                        </div>
+
+                        <div class="remember-me">
+                            <input type="checkbox" name="r-remember-me" id="r-remember-me">
+
+                            <label for="r-remember-me">
+                                J'accepte les <a href="#" style="--c: 'Conditions d\'Utilisation';">Conditions d'Utilisation</a>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span class="submit-content">
+                                S'inscrire
+                            </span>
+
+                            <div class="loading">
+                                <div class="load"></div>
+                            </div>
+                        </button>
+                    </form>
+                </div>
+
+                <div class="alternative">
+                    <div class="content">
+                        <p>Ce n'est pas la première<br>fois ?</p>
+
+                        <button type="button" class="toggle-form">
+                            Se connecter
+                        </button>
+                    </div>
+                </div>
+
+                <div class="circle"></div>
+            </div>
+        </div>
+
+        <div class="cache"></div>
+    </main>
+
+    <script type="text/javascript" src="../assets/js/login.js"></script>
+
+</body>
+</html>

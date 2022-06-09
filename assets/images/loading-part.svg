@@ -1,0 +1,23 @@
+<svg viewBox="5 5 110 110" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        svg {
+            position: relative;
+        }
+
+        svg circle {
+            width: 100%;
+            height: 100%;
+            fill: transparent;
+            stroke-width: 10px;
+            stroke-dasharray: 312;
+            stroke-dashoffset: calc(310 - (310 * 30) / 100);
+        }
+    </style>
+
+    <!-- <line x1="0" x2="120" y1="0" y2="120" stroke="#0f0" />
+    <line x1="120" x2="0" y1="0" y2="120" stroke="#0f0" />
+    <line x1="60" x2="60" y1="0" y2="120" stroke="#00f" />
+    <line x1="0" x2="120" y1="60" y2="60" stroke="#00f" /> -->
+
+    <circle cx="60" cy="60" r="50" stroke="#fff" />
+</svg>
