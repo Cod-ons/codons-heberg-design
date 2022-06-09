@@ -2,6 +2,7 @@ main {
   position: relative;
   width: 100vw;
   height: 100vh;
+  background: var(--white);
 }
 
 main div {
@@ -608,8 +609,8 @@ main div.forms > div.login .circle {
 }
 
 main div.forms > div.login .alternative {
-  -webkit-transition: .5s ease 350ms;
-  transition: .5s ease 350ms;
+  -webkit-transition: 0.5s ease 350ms;
+  transition: 0.5s ease 350ms;
   right: 0;
   visibility: visible;
   opacity: 1;
@@ -629,8 +630,8 @@ main div.forms > div.register .form-container .form-content .remember-me label a
 }
 
 main div.forms > div.register .alternative {
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   left: 6%;
   visibility: hidden;
   opacity: 0;
@@ -671,8 +672,8 @@ main.active .forms .login .form-container {
 }
 
 main.active .forms .login .alternative {
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   right: 6%;
   visibility: hidden;
   opacity: 0;
@@ -692,8 +693,8 @@ main.active .forms .register .circle {
 }
 
 main.active .forms .register .alternative {
-  -webkit-transition: .5s ease 350ms;
-  transition: .5s ease 350ms;
+  -webkit-transition: 0.5s ease 350ms;
+  transition: 0.5s ease 350ms;
   left: 0;
   visibility: visible;
   opacity: 1;
@@ -703,5 +704,138 @@ main.active .cache {
   left: -48%;
   -webkit-box-shadow: 25px 20px 10px #eee8;
           box-shadow: 25px 20px 10px #eee8;
+}
+
+/* page laoder */
+.page-loader {
+  --size: max(150vh, 150vw);
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  z-index: 100;
+  background: var(--white-1);
+  animation: identifier 1.05s ease reverse forwards;
+}
+
+.page-loader img {
+  position: relative;
+  width: 4em;
+  -webkit-filter: brightness(15%);
+          filter: brightness(15%);
+}
+
+.page-loader img:nth-child(1) {
+  top: 2em;
+  -webkit-animation: loading-animation .8s linear infinite;
+          animation: loading-animation .8s linear infinite;
+}
+
+.page-loader img:nth-child(2) {
+  top: -2em;
+  -webkit-animation: loading-animation 0.8s cubic-bezier(0.445, 0.1, 0.55, 0.9) 100ms infinite;
+          animation: loading-animation 0.8s cubic-bezier(0.445, 0.1, 0.55, 0.9) 100ms infinite;
+}
+
+@-webkit-keyframes identifier {
+  from {
+    width: 0;
+    height: 0;
+    top: 50vh;
+    left: 50vw;
+    opacity: 0;
+    visibility: hidden;
+  }
+  5% {
+    visibility: visible;
+  }
+  80% {
+    opacity: 1;
+  }
+  to {
+    top: calc(50% - (var(--size) / 2));
+    left: calc(50% - (var(--size) / 2));
+    width: var(--size);
+    height: var(--size);
+  }
+}
+
+@keyframes identifier {
+  from {
+    width: 0;
+    height: 0;
+    top: 50vh;
+    left: 50vw;
+    opacity: 0;
+    visibility: hidden;
+  }
+  5% {
+    visibility: visible;
+  }
+  80% {
+    opacity: 1;
+  }
+  to {
+    top: calc(50% - (var(--size) / 2));
+    left: calc(50% - (var(--size) / 2));
+    width: var(--size);
+    height: var(--size);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  main .forms {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .forms .login {
+    width: 100%;
+  }
+  main .forms .login .form-container {
+    width: 100%;
+  }
+  main .forms .login .alternative {
+    top: 0;
+    left: 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    padding-top: 1rem;
+  }
+  main .forms .login .circle {
+    width: 30vw;
+    height: 30vw;
+  }
+  main .forms .register {
+    display: none;
+  }
+  main .cache {
+    --cache-size: max(200vw, 200vh);
+    width: var(--cache-size) !important;
+    height: var(--cache-size) !important;
+    top: calc(0px - var(--cache-size) + 10em) !important;
+    left: calc(var(--cache-size) / -2.65) !important;
+  }
+  main.active .forms .login .form-container {
+    left: 0;
+    top: -6%;
+  }
+  main.active .cache {
+    background: #000;
+  }
 }
 /*# sourceMappingURL=login.css.map */
