@@ -518,57 +518,6 @@ main {
     }
 }
 
-/* page laoder */
-.page-loader {
-    --size: max(150vh, 150vw);
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    z-index: 100;
-    background: var(--white-1);
-    animation: identifier $form-animation-time * 1.5 ease reverse forwards;
-
-    img {
-        position: relative;
-        width: 4em;
-        filter: brightness(15%);
-        
-        &:nth-child(1) {
-            top: 2em;
-            animation: loading-animation .8s linear infinite;
-        }
-
-        &:nth-child(2) {
-            top: -2em;
-            animation: loading-animation .8s cubic-bezier(0.445, 0.10, 0.55, 0.90) 100ms infinite;
-        }
-    }
-}
-
-@keyframes identifier {
-    from {
-        width: 0;
-        height: 0;
-        top: 50vh;
-        left: 50vw;
-        opacity: 0;
-        visibility: hidden;
-    }
-
-    5% { visibility: visible }
-    80% { opacity: 1 }
-    
-    to {
-        top: calc(50% - (var(--size) / 2));
-        left: calc(50% - (var(--size) / 2));
-        width: var(--size);
-        height: var(--size);
-    }
-}
-
 @media only screen and (max-width: 600px) {
     main {
         .forms {
