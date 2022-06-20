@@ -1,3 +1,7 @@
+body {
+  background: var(--background-theme);
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8,6 +12,7 @@ main {
           flex-direction: column;
   width: 100vw;
   min-height: 100vh;
+  z-index: 2;
 }
 
 main section {
@@ -26,10 +31,11 @@ main section {
           align-items: center;
   position: relative;
   width: 100%;
-  height: 100vh;
+  margin: 0;
 }
 
 main section.title {
+  height: calc(100vh - 100px);
   overflow: hidden;
 }
 
@@ -49,6 +55,11 @@ main section.title .backdrop img {
      object-fit: cover;
   -webkit-filter: opacity(80%) sepia(45%);
           filter: opacity(80%) sepia(45%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 
 main section.title .container {
@@ -104,9 +115,9 @@ main section.title .container .content .title-box h1::after {
   top: -5px;
   left: 2px;
   width: 41px;
-  height: 2px;
+  height: 3px;
   background: #25d;
-  border-radius: 1px;
+  border-radius: 2px;
   -webkit-transition: all .6s ease;
   transition: all .6s ease;
 }
@@ -117,6 +128,7 @@ main section.title .container .content .title-box h1 > span {
 }
 
 main section.title .container .content .title-box h1 > span span {
+  color: #25d;
   font-size: 3.6rem;
   font-family: 'Poppins-Bold', 'SourceSansPro-Bold', sans-serif;
 }
@@ -191,6 +203,10 @@ main section.title .container .btn-box button {
   cursor: pointer;
   opacity: 1;
   left: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 main section.title .container .btn-box button::after {
@@ -201,10 +217,240 @@ main section.title .container .btn-box button::after {
   font-size: 1.1rem;
 }
 
-main section.title .container .btn-box button:hover {
+main section.title .container .btn-box button:hover, main section.title .container .btn-box button:focus {
   opacity: .9;
   left: 3px;
   color: var(--grey-8);
+}
+
+main section.offers {
+  min-height: calc(50% + 5em);
+  height: auto;
+}
+
+main section.offers .description {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 2em 1em;
+  margin-bottom: 4em;
+  text-align: center;
+}
+
+main section.offers .description h2 {
+  font-size: 2rem;
+  font-family: 'SourceSansPro-SemiBold', sans-serif;
+}
+
+main section.offers .description p {
+  padding: 0 2em;
+  font-family: 'SourceSansPro-Light';
+}
+
+main section.offers .container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 20px;
+  min-height: 21.5em;
+  height: calc(max(50%, auto) + 1em);
+}
+
+main section.offers .container .box {
+  background: var(--white);
+  min-width: 10em;
+  width: calc(max(25%, 20em) - 4em);
+  min-height: 21em;
+  height: 100%;
+  max-height: 25em;
+  border-radius: 3px;
+  position: relative;
+  bottom: 0;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  padding: 0 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-shadow: 5px 5px 10px 3px var(--white-2), 0 0 8px 5px #dddd;
+          box-shadow: 5px 5px 10px 3px var(--white-2), 0 0 8px 5px #dddd;
+}
+
+main section.offers .container .box h3 {
+  position: relative;
+  top: 5px;
+  font-size: 2rem;
+  font-family: 'SourceSansPro-SemiBold';
+}
+
+main section.offers .container .box ul {
+  list-style: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+main section.offers .container .box ul li {
+  position: relative;
+  margin: 5px 0;
+  font-family: 'SourceSansPro-Light';
+  left: 5px;
+}
+
+main section.offers .container .box ul li::before {
+  position: relative;
+  top: 6px;
+  z-index: 2;
+  right: 5px;
+  -webkit-filter: contrast(0) brightness(2);
+          filter: contrast(0) brightness(2);
+}
+
+main section.offers .container .box ul li::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  top: 7px;
+  left: -4px;
+}
+
+main section.offers .container .box ul li.enable::before {
+  content: url(../images/valid-24.svg);
+}
+
+main section.offers .container .box ul li.enable::after {
+  background: #8d6;
+}
+
+main section.offers .container .box ul li.disable::before {
+  content: url(../images/invalid-24.svg);
+}
+
+main section.offers .container .box ul li.disable::after {
+  background: #f24e;
+}
+
+main section.offers .container .box .price {
+  font-family: 'Poppins-Light';
+  font-size: .9rem;
+  position: relative;
+  left: 5px;
+  top: -.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+main section.offers .container .box .price > span {
+  padding-left: .3em;
+  font-family: 'Poppins-Regular';
+  color: var(--secondary-color);
+}
+
+main section.offers .container .box .price > span span {
+  font-family: 'SourceSansPro-SemiBold';
+  font-size: 2.5rem;
+}
+
+main section.offers .container .box .link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 40px;
+}
+
+main section.offers .container .box .link button {
+  outline: none;
+  background: var(--primary-color);
+  width: 100px;
+  height: 100%;
+  border: none;
+  color: var(--black-3);
+  font-family: 'Poppins-SemiBold';
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  opacity: .9;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+main section.offers .container .box .link button:hover, main section.offers .container .box .link button:focus {
+  opacity: 75%;
+}
+
+main section.offers .container .box .link button::after {
+  content: '>';
+}
+
+main section.offers .container .box.best {
+  border: medium solid var(--primary-color);
+  bottom: 20px;
+}
+
+main section.offers .container .box.best::after {
+  content: 'Meilleure offre';
+  position: absolute;
+  top: -1px;
+  right: 14px;
+  background: var(--primary-color);
+  padding: 5px 8px;
+  border-radius: 0 0 4px 4px;
+  font-family: 'SourceSansPro-Regular';
+  color: var(--white);
+}
+
+@media screen and (max-width: 1006px) {
+  main section.offers .container .box.best {
+    bottom: 0;
+  }
+}
+
+main section.offers .container .box:hover {
+  bottom: 10px;
+  -webkit-box-shadow: 5px 5px 10px 3px var(--white-3);
+          box-shadow: 5px 5px 10px 3px var(--white-3);
+}
+
+main section.offers .container .box:hover:is(.best) {
+  bottom: 30px;
+}
+
+@media screen and (max-width: 1006px) {
+  main section.offers .container .box:hover:is(.best) {
+    bottom: 10px;
+  }
+}
+
+main section.others {
+  height: 100vh;
 }
 
 @-webkit-keyframes title-shadow {

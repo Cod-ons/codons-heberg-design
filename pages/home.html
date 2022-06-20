@@ -19,10 +19,44 @@
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
 
-    <script type="text/javascript" src="../assets/js/login.js"></script>
+    <script type="text/javascript" src="../assets/js/custom-select.js"></script>
 
 </head>
 <body>
+
+    <header>
+        <a href="#" class="title">
+            <h2>
+                <span><span>C</span>od'ons</span> Heberg
+            </h2>
+        </a>
+
+        <nav class="menu active">
+            <button class="toggle-btn">
+                <span></span>
+            </button>
+
+            <ul>
+                <li><a href="#">Lien</a></li>
+                <li><a href="#">Lien</a></li>
+                <li>
+                    <div class="select">
+                        <select>
+                            <option selected>Lien</option>
+                            <option value="#lien1">Lien A</option>
+                            <option value="#lien2">Lien B</option>
+                            <option value="#lien3">Lien C</option>
+                        </select>
+                    </div>
+                </li>
+                <li><a href="#">Lien</a></li>
+            </ul>
+
+            <div class="cache"></div>
+        </nav>
+    </header>
+
+    <div class="header-fix"></div>
 
     <main>
         <section class="title">
@@ -37,16 +71,100 @@
                             <span><span>C</span>od'ons</span> Heberg
                         </h1>
 
-                        <p>L'hébergement plus simplement et pour tous</p>
+                        <p>L'hébergement plus simplement, pour tous</p>
                     </div>
                 </div>
     
                 <div class="btn-box">
-                    <button type="button">
+                    <button type="button" onclick="window.scrollTo(0, document.querySelector('.backdrop').clientHeight)">
                         Commencer dès maintenant
                     </button>
                 </div>
             </div>
+        </section>
+        
+        <section class="offers">
+            <div class="description">
+                <h2 class="title">
+                    Nos meilleures offres
+                </h2>
+
+                <p>
+                    Nos offres d'hébergement de site web les plus appréciées par notre communauté en ce moment.
+                </p>
+            </div>
+
+            <div class="container">
+                <div class="box">
+                    <h3>Offre 1</h3>
+
+                    <ul>
+                        <li class="enable">Lorem ipsum dolor sit</li>
+                        <li class="disable">Amet consectetur adipisicing</li>
+                        <li class="disable">Animi, eveniet</li>
+                        <li class="disable">Debitis, libero eaque voluptatem</li>
+                    </ul>
+
+                    <div class="price">
+                        A partir de
+                        <span><span>0€</span>/mois</span>
+                    </div>
+
+                    <div class="link">
+                        <button type="button">
+                            C'est parti
+                        </button>
+                    </div>
+                </div>
+
+                <div class="box best">
+                    <h3>Offre 2</h3>
+
+                    <ul>
+                        <li class="enable">Lorem ipsum dolor sit</li>
+                        <li class="enable">Amet consectetur adipisicing</li>
+                        <li class="disable">Animi, eveniet</li>
+                        <li class="disable">Debitis, libero eaque voluptatem</li>
+                    </ul>
+
+                    <div class="price">
+                        A partir de
+                        <span><span>1€</span>/mois</span>
+                    </div>
+
+                    <div class="link">
+                        <button type="button">
+                            C'est parti
+                        </button>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <h3>Offre 3</h3>
+
+                    <ul>
+                        <li class="enable">Lorem ipsum dolor sit</li>
+                        <li class="enable">Amet consectetur adipisicing</li>
+                        <li class="enable">Animi, eveniet</li>
+                        <li class="enable">Debitis, libero eaque voluptatem</li>
+                    </ul>
+
+                    <div class="price">
+                        A partir de
+                        <span><span>2€</span>/mois</span>
+                    </div>
+
+                    <div class="link">
+                        <button type="button">
+                            C'est parti
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="others">
+            <!--  -->
         </section>
     </main>
 
@@ -58,7 +176,19 @@
     </div> -->
 
     <script type="text/javascript">
-        setTimeout(() => document.querySelector('.loader-container').classList.remove('load'), 2000);
+        // setTimeout(() => document.querySelector('.loader-container').remove('load'), 2000);
+        // setTimeout(() => document.querySelector('.loader-container').remove(), 1000);
+        // window.scrollTo(0, document.body.scrollHeight);
+
+        // Header's menu
+        const menu = document.querySelector('header .menu');
+
+        document.body.addEventListener('click', (e) => {
+            if (e.composedPath().includes(menu))
+                menu?.classList.toggle('active');
+            else if (menu?.classList.contains('active'))
+                menu?.classList.remove('active');
+        });
     </script>
 
 </body>

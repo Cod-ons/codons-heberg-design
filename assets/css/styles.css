@@ -75,7 +75,7 @@ a, button, input, textarea {
   --black-3: #111;
   --black: #000;
   /* others */
-  --background-theme: var(--white-1);
+  --background-theme: #dddb;
 }
 
 svg:not(:root) {
@@ -140,6 +140,389 @@ noscript {
 html, body {
   width: 100vw;
   height: 100vh;
+}
+
+/* Header */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  height: 100px;
+  width: 100%;
+  background: var(--black-1);
+  position: fixed;
+  top: 0;
+  z-index: 6;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .title, header .menu {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1em;
+}
+
+header .title {
+  margin-left: 10px;
+  text-decoration: none;
+  color: unset;
+  cursor: pointer;
+}
+
+header .title h2 {
+  color: var(--white-1);
+  font-size: 2.5rem;
+  font-family: 'Poppins-Regular';
+  pointer-events: none;
+}
+
+header .title h2::after {
+  content: '';
+  display: block;
+  cursor: pointer;
+  position: relative;
+  top: -3px;
+  left: 0;
+  width: 36px;
+  height: 3px;
+  background: #25d;
+  border-radius: 2px;
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+}
+
+header .title h2 > span {
+  -webkit-transition: all .6s ease;
+  transition: all .6s ease;
+}
+
+header .title h2 > span span {
+  color: #25d;
+  font-size: 3rem;
+  font-family: 'Poppins-Bold', 'SourceSansPro-Bold', sans-serif;
+}
+
+header .title:hover h2::after {
+  width: calc(50% + 5px);
+}
+
+header .title:hover h2 > span {
+  color: #25d;
+}
+
+header .menu .toggle-btn {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+}
+
+header .menu .toggle-btn span, header .menu .toggle-btn span::after, header .menu .toggle-btn span::before {
+  pointer-events: none;
+  display: block;
+  width: 40px;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--primary-color);
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+header .menu .toggle-btn span::after, header .menu .toggle-btn span::before {
+  content: '';
+  position: absolute;
+}
+
+header .menu .toggle-btn span::before {
+  top: 8px;
+}
+
+header .menu .toggle-btn span::after {
+  top: 36px;
+}
+
+header .menu .toggle-btn::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background: var(--primary-color);
+  opacity: 0;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+header .menu .toggle-btn:hover::before, header .menu .toggle-btn:focus::before {
+  opacity: 15%;
+  width: 80px;
+  height: 80px;
+}
+
+header .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .menu ul li {
+  position: relative;
+  margin: 0 10px;
+}
+
+header .menu ul li a {
+  text-decoration: none;
+  color: var(--white-1);
+  padding: 10px 20px;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+  font-family: 'Poppins-Light';
+  border-radius: 3px;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  background: none;
+  outline: none;
+}
+
+header .menu ul li a:hover {
+  background: var(--primary-color);
+  border-color: var(--black-1);
+  color: var(--black-1);
+}
+
+header .menu ul li .select {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+header .menu ul li .select select {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+}
+
+header .menu ul li .select .select-selected {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: var(--white-1);
+  font-family: 'Poppins-Light';
+  border: 1px solid var(--primary-color);
+  border-radius: 3px;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  background: none;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+header .menu ul li .select .select-selected div {
+  pointer-events: none;
+  margin: 0 5px;
+}
+
+header .menu ul li .select .select-selected div.select-selected-content {
+  margin-left: 5px;
+}
+
+header .menu ul li .select .select-selected div.select-selector {
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+}
+
+header .menu ul li .select .select-selected:hover {
+  background: var(--primary-color);
+  border-color: var(--black-1);
+  color: var(--black-1);
+}
+
+header .menu ul li .select .select-options {
+  display: none;
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+header .menu ul li .select .select-options div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  font-family: 'Poppins-Light';
+  color: var(--white-1);
+  padding: 10px 0;
+  background: var(--black-1);
+  width: 100%;
+  -webkit-transition: all 250ms ease;
+  transition: all 250ms ease;
+  border-right: 1px solid var(--primary-color);
+  border-left: 1px solid var(--primary-color);
+}
+
+header .menu ul li .select .select-options div:hover {
+  background: var(--primary-color);
+  color: var(--black-1);
+}
+
+header .menu ul li .select .select-options div:nth-last-child(1) {
+  border-bottom: 1px solid var(--primary-color);
+  border-radius: 0 0 3px 3px;
+}
+
+header .menu ul li .select.active .select-selected {
+  border-radius: 3px 3px 0 0;
+  border-bottom: none;
+  cursor: default;
+}
+
+header .menu ul li .select.active .select-selected .select-selector {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+header .menu ul li .select.active .select-selected:hover {
+  background: var(--black-1);
+  border-color: var(--primary-color);
+  color: var(--white-1);
+}
+
+header .menu ul li .select.active .select-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .menu .cache {
+  --menu-before-size: max(300vh, 300vw);
+  position: fixed;
+  display: block;
+  top: calc(var(--menu-before-size) * -.5);
+  right: calc(var(--menu-before-size) * -.5);
+  width: 0;
+  height: 0;
+  background: var(--black-1);
+  border-radius: var(--menu-before-size);
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  z-index: -1;
+}
+
+header .menu.active .toggle-btn span {
+  background: transparent;
+}
+
+header .menu.active .toggle-btn span::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 22px;
+}
+
+header .menu.active .toggle-btn span::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 22px;
+}
+
+header .menu.active ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .menu.active .cache {
+  width: var(--menu-before-size);
+  height: var(--menu-before-size);
+}
+
+@media screen and (max-width: 850px) {
+  header .menu ul {
+    display: none;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  header .menu ul li {
+    width: 10em;
+  }
+  header .menu ul li a, header .menu ul li .select {
+    background: #f00;
+    width: 100%;
+  }
+  header .menu ul li:nth-child(1) {
+    top: -10px;
+  }
+  header .menu.active ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 25px 0;
+  }
+}
+
+.header-fix {
+  display: block;
+  width: 100%;
+  height: 100px;
 }
 
 /* page laoder */
