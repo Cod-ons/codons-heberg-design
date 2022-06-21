@@ -1,0 +1,354 @@
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5em;
+}
+
+main .status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #ddda;
+  min-width: 300px;
+  width: calc(30% - 2.5em);
+  padding: .5em 1em;
+  border-radius: 5px;
+}
+
+main .status h2 {
+  font-family: 'Poppins-Bold';
+  margin: 10px 0 20px;
+}
+
+main .status .content {
+  list-style: none;
+}
+
+main .status .content li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: 'SourceSansPro-SemiBold';
+}
+
+main .status .content li span {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  font-family: 'SourceSansPro-Light';
+  font-size: .9rem;
+  top: 2px;
+  left: 5px;
+}
+
+main .status .content li.online-status span {
+  left: 0;
+}
+
+main .status .content li.online-status span::before {
+  position: relative;
+  top: 5px;
+  margin: 0 4px;
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+main .status .content li.online-status span.online::before {
+  background: #7e5;
+}
+
+main .status .content li.online-status span.outline::before {
+  background: #f24e;
+}
+
+main .container {
+  border: 1px solid var(--grey-3);
+  border-radius: 5px;
+  overflow: hidden;
+  width: calc(70% - .5em);
+}
+
+main .container .header-infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 3em;
+  background: var(--primary-color);
+}
+
+main .container .header-infos .folder-opened {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(100% - 40px);
+  padding: 5px 8px;
+  pointer-events: none;
+}
+
+main .container .header-infos .folder-opened .icon {
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  padding: 0 4px;
+}
+
+main .container .header-infos .folder-opened .icon img {
+  width: min(28px, 100%);
+  height: min(28px, 100%);
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-filter: invert(1) brightness(0.95);
+          filter: invert(1) brightness(0.95);
+}
+
+main .container .header-infos .folder-opened .icon img:first-child {
+  position: absolute;
+  -webkit-filter: invert(1) brightness(0.95) opacity(40%);
+          filter: invert(1) brightness(0.95) opacity(40%);
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  top: -2px;
+  left: 5px;
+}
+
+main .container .header-infos .folder-opened .name {
+  margin: 0 5px;
+  padding-left: 5px;
+  font-family: 'Poppins-Light';
+  color: var(--white);
+}
+
+main .container .header-infos .actions {
+  position: relative;
+  left: 8px;
+}
+
+main .container .header-infos .actions .action-btn {
+  height: 38px;
+  cursor: pointer;
+}
+
+main .container .header-infos .actions .action-btn .icon {
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-align: center;
+  height: 100%;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  color: var(--white);
+  pointer-events: none;
+}
+
+main .container form {
+  position: relative;
+}
+
+main .container form .content {
+  background: var(--white);
+  width: 100%;
+  border: none;
+}
+
+main .container form .content thead tr {
+  height: 36px;
+}
+
+main .container form .content thead tr th {
+  position: relative;
+  font-family: 'SourceSansPro-SemiBold';
+  font-size: 1.1rem;
+  color: var(--black-3);
+  border-right: 1px solid var(--grey-1);
+  height: calc(1.1rem + 5px);
+  margin: -1px;
+}
+
+main .container form .content thead tr th.select-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 22px;
+  height: 36px;
+  padding: 0 15px;
+}
+
+main .container form .content thead tr th:first-child, main .container form .content thead tr th:last-child {
+  border-right: none;
+}
+
+main .container form .content tbody tr td {
+  position: relative;
+  padding: 10px 0;
+  font-family: 'SourceSansPro-Regular';
+  font-size: 16px;
+  color: var(--grey-8);
+}
+
+main .container form .content tbody tr td.selector {
+  text-align: left;
+  padding: 0 10px;
+  width: 22px;
+}
+
+main .container form .content tbody tr td.selector .checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 24px;
+}
+
+main .container form .content tbody tr td.filename, main .container form .content tbody tr td.type {
+  text-align: left;
+  padding-left: 20px;
+}
+
+main .container form .content tbody tr td.last-modification, main .container form .content tbody tr td.size {
+  text-align: center;
+}
+
+main .container form .content tbody tr td::after {
+  content: '';
+  display: block;
+  height: calc(100% + 2px);
+  width: 1px;
+  background: var(--grey-1);
+  position: absolute;
+  top: -1px;
+  right: 0;
+}
+
+main .container form .content tbody tr td:first-child::after, main .container form .content tbody tr td:last-child::after {
+  display: none;
+}
+
+main .container form .content tbody tr.selected td {
+  background: #dddd;
+}
+
+main .container form .content tr {
+  width: 100%;
+  text-align: center;
+}
+
+main .container form .content input[type="checkbox"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 9px;
+  background: transparent;
+  cursor: pointer;
+  -webkit-transition: all 150ms;
+  transition: all 150ms;
+}
+
+main .container form .content input[type="checkbox"]:hover {
+  background: #37e7;
+}
+
+main .container form .content input[type="checkbox"]:checked {
+  background: var(--secondary-color);
+}
+
+main .container form .content input[type="checkbox"]::after, main .container form .content input[type="checkbox"]::before {
+  content: '';
+  display: block;
+  height: 2px;
+  background: var(--white);
+  position: relative;
+  border-radius: 1px;
+}
+
+main .container form .content input[type="checkbox"]::before {
+  top: 10px;
+  left: 1px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 7px;
+}
+
+main .container form .content input[type="checkbox"]::after {
+  top: 5px;
+  left: 3.5px;
+  -webkit-transform: rotate(305deg);
+          transform: rotate(305deg);
+  width: 12px;
+}
+
+main .container form::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--white-3);
+  top: 37px;
+}
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <title>my-app • efridelesc</title>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cod'ons Heberg, solution d'hébergement pour tous.">
+    <meta name="author" content="Ezequiel FRIDEL ESCALONA">
+
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/app.css">
+
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+
+    <header>
+        <a href="#" class="title">
+            <h2>
+                <span><span>C</span>od'ons</span> Heberg
+            </h2>
+        </a>
+
+        <nav class="menu">
+            <!-- <button class="toggle-btn">
+                <span></span>
+            </button> -->
+
+            <ul>
+                <li><a href="#">Lien</a></li>
+                <li><a href="#">Lien</a></li>
+                <li>
+                    <div class="select">
+                        <select>
+                            <option selected>Lien</option>
+                            <option value="#lien1">Lien A</option>
+                            <option value="#lien2">Lien B</option>
+                            <option value="#lien3">Lien C</option>
+                        </select>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="cache"></div>
+        </nav>
+    </header>
+
+    <div class="header-fix"></div>
+
+    <main role="main">
+        <div class="status">
+            <h2>my-app</h2>
+
+            <ul class="content">
+                <li class="online-status">
+                    Statut : <span class="online">En ligne</span>
+                </li>
+
+                <li class="storage-space">
+                    Stockage : <span>4.55MB / 300 MB</span>
+                </li>
+
+                <li class="databases">
+                    Bases de données : <span>0 / 1</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="header-infos">
+                <div class="folder-opened">
+                    <div class="icon">
+                        <img src="../assets/images/folder.svg" alt="Folder">
+                        <img src="../assets/images/folder.svg" alt="Folder">
+                    </div>
+
+                    <div class="name">
+                        files/my-app
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <div class="action-btn">
+                        <div class="icon">
+                            ...
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form>
+                <table class="content">
+                    <thead>
+                        <tr>
+                            <th class="select-all">
+                                <input type="checkbox" name="select-all" id="select-all">
+                            </th>
+
+                            <th>Nom du fichier &emsp;</th>
+                            <th>Type de document</th>
+                            <th>Dernière modification</th>
+                            <th>Taille</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr data-name="path">
+                            <td class="selector">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="checkbox-0">
+                                </div>
+                            </td>
+                            <td class="filename">first.md</td>
+                            <td class="type">Markdown file</td>
+                            <td class="last-modification">03/03/22 13:24:50</td>
+                            <td class="size">430 B</td>
+                        </tr>
+
+                        <tr data-name="path">
+                            <td class="selector">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="checkbox-1">
+                                </div>
+                            </td>
+                            <td class="filename">index.html</td>
+                            <td class="type">HTML file</td>
+                            <td class="last-modification">03/17/22 16:05:58</td>
+                            <td class="size">3.14 KB</td>
+                        </tr>
+
+                        <tr data-name="path">
+                            <td class="selector">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="checkbox-2">
+                                </div>
+                            </td>
+                            <td class="filename">style.css</td>
+                            <td class="type">CSS file</td>
+                            <td class="last-modification">03/17/22 13:39:58</td>
+                            <td class="size">1.08 KB</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </main>
+
+    <!-- <div class="loader-container">
+        <div class="page-loader">
+            <img src="../assets/images/loading-part.svg" alt="Loading">
+            <img src="../assets/images/loading-part.svg" alt="Loading">
+        </div>
+    </div> -->
+
+    <script type="text/javascript">
+        // Header's menu
+        const menu = document.querySelector('header .menu');
+
+        document.body.addEventListener('click', (e) => {
+            if (e.composedPath().includes(menu))
+                menu?.classList.toggle('active');
+            else if (menu?.classList.contains('active'))
+                menu?.classList.remove('active');
+        });
+
+        // Table
+        const table = document.querySelector('table.content');
+        const files = document.querySelectorAll('tbody > tr');
+        const selectAll = document.querySelector('th.select-all');
+
+        selectAll.addEventListener('click', (e) => files.forEach(a => {
+            a.querySelector('input[type="checkbox"]').checked = e.target.checked;
+            a.classList[e.target.checked ? "add" : "remove"]("selected");
+        }));
+
+        files.forEach(a => {
+            a.addEventListener('click', function () {
+                var b = 0;
+                files.forEach(c => b += c.querySelector('input[type="checkbox"]').checked);
+                selectAll.querySelector('input[type="checkbox"]').checked = b === files.length;
+            });
+
+            a.addEventListener('change', (e) => a.classList[e.target.checked ? "add" : "remove"]("selected"));
+        });
+    </script>
+
+</body>
+</html>
