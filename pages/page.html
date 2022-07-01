@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <title>Cod'ons Heberg</title>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cod'ons Heberg, solution d'hébergement pour tous.">
+    <meta name="author" content="Ezequiel FRIDEL ESCALONA">
+
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- <script type="text/javascript" src="../assets/js/custom-select.js"></script> -->
+
+</head>
+<body class="load">
+
+    <header>
+        <div class="container">
+            <a href="/" class="title">
+                <h2>
+                    <span><span>C</span>od'ons</span> Heberg
+                </h2>
+            </a>
+
+            <div class="menu">
+                <button type="button" class="menu-btn">
+                    <span></span>
+                </button>
+
+                <nav class="links">
+                    <ul>
+                        <li><a href="#">Lien</a></li>
+                        <li><a href="#">Lien</a></li>
+                        <li><a href="#">Lien</a></li>
+                        <li><a href="#">Lien</a></li>
+                    </ul>
+                </nav>
+
+                <div class="background"></div>
+            </div>
+        </div>
+
+        <div class="fix"></div>
+    </header>
+
+    <main role="main" style="display: block; background: var(--white-1);">
+        <!-- Many content -->
+        
+        <script>
+            setTimeout(() => document.querySelector('main').style.height = `${window.innerHeight - 100 - document.querySelector('footer').clientHeight}px`, 500);
+        </script>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="sec about">
+                <h3>A propos</h3>
+                
+                <ul class="content">
+                    <li><a href="#">Conditions Générales d'Utilisation</a></li>
+                    <li><a href="#">Conditions Générales de Vente</a></li>
+                    <li><a target="_blank" href="https://www.paypal.com/donate?hosted_button_id=BQ9VTYNAH3RRC">Faire un don</a></li>
+                    <li><a href="#">Données personnelles</a></li>
+                </ul>
+            </div>
+            
+            <span class="border"></span>
+            
+            <div class="sec contact">
+                <h3>Nous contacter</h3>
+                
+                <ul class="content">
+                    <li><a href="#">Signaler une anomalie ou un abus</a></li>
+                    <li>
+                        <a target="_blank" href="https://github.com/TheRedMineTheRedMine">Ezequiel Dev</a>
+                        &ensp; — &ensp;
+                        <a target="_blank" href="https://github.com/Mapoto40">Mapoto40</a>
+                    </li>
+                    <li><a href="#">Lien</a></li>
+                    <li><a target="_blank" href="https://discord.gg/gpNXES9swT">Serveur Discord de support</a></li>
+                </ul>
+            </div>
+            
+            <span class="border"></span>
+            
+            <div class="sec quick-links">
+                <h3>Liens rapides</h3>
+                
+                <ul class="content">
+                    <li><a target="_blank" href="https://wikijap.netlify.app">Wikijap</a></li>
+                    <li><a target="_blank" href="https://github.com/Cod-ons">Cod'ons</a></li>
+                    <li><a target="_blank" href="https://github.com/Cod-ons">Github</a></li>
+                    <li><a href="#">Remerciements</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Cod'ons Heberg &copy;&ensp; — &ensp; Copyright 2021 - 2023 &ensp; — &ensp; Tout droits réservés</p>
+        </div>
+    </footer>
+
+    <div class="loader-container">
+        <div class="page-loader">
+            <img src="../assets/images/loading-part.svg" alt="Loading">
+            <img src="../assets/images/loading-part.svg" alt="Loading">
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        setTimeout(() => document.body.classList.remove('load'), 1000);
+
+        // Header's menu
+        const menu = document.querySelector('header .menu');
+        const menuBtn = document.querySelector('header .menu-btn');
+
+        document.body.addEventListener('click', (e) => {
+            if (e.composedPath().includes(menuBtn))
+                menu?.classList.toggle('active');
+            else if (menu?.classList.contains('active'))
+                menu?.classList.remove('active');
+        });
+    </script>
+
+</body>
+</html>
