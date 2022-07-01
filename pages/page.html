@@ -50,11 +50,15 @@
         <div class="fix"></div>
     </header>
 
-    <main role="main" style="display: block; background: var(--white-1);">
+    <main role="main" style="display: block; background: var(--white-1); min-width: 250px;">
         <!-- Many content -->
         
         <script>
-            setTimeout(() => document.querySelector('main').style.height = `${window.innerHeight - 100 - document.querySelector('footer').clientHeight}px`, 500);
+            setTimeout(() => {
+                var width = window.innerHeight - 100 - document.querySelector('footer').clientHeight;
+                if (width < 250) width = 250;
+                document.querySelector('main').style.height = `${width}px`;
+            }, 500);
         </script>
     </main>
 

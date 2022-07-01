@@ -384,6 +384,7 @@ body {
             &.container {
                 justify-content: space-evenly;
                 padding: 20px 10px;
+                flex-wrap: wrap;
                 
                 .sec {
                     padding: 10px 20px 40px;
@@ -466,9 +467,15 @@ body {
                 color: var(--white);
     
                 p {
-                    padding: 10px;
+                    padding: 10px 20px;
                     font-family: "Poppins-Light";
                 }
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            .container .border {
+                display: none !important;
             }
         }
     }

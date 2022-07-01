@@ -450,6 +450,8 @@ body footer > div.container {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   padding: 20px 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 body footer > div.container .sec {
@@ -543,8 +545,14 @@ body footer > div.copyright {
 }
 
 body footer > div.copyright p {
-  padding: 10px;
+  padding: 10px 20px;
   font-family: "Poppins-Light";
+}
+
+@media screen and (max-width: 900px) {
+  body footer .container .border {
+    display: none !important;
+  }
 }
 
 body .loader-container {
