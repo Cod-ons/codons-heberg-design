@@ -71,7 +71,7 @@
                     <div class="buttons">
                         <div class="fix"></div>
 
-                        <button class="submit-btn" type="submit">
+                        <button class="submit-btn" type="button">
                             Suivant
                         </button>
                     </div>
@@ -79,7 +79,7 @@
             </div>
         </section>
 
-        <section class="import-methods">
+        <section class="upload-methods" style="display: none;">
             <div class="container">
                 <h2 data-content="Importer des fichiers">
                     Importer des fichiers
@@ -110,7 +110,7 @@
 
                             <label for="zip">
                                 <div class="custom-input"></div>
-                                ZIP file <span>(*zip)</span>
+                                ZIP file&ThickSpace;<span>(*.zip)</span>
                             </label>
                         </div>
                     </div>
@@ -125,6 +125,30 @@
                         </button>
                     </div>
 
+                </form>
+            </div>
+        </section>
+
+        <section class="upload">
+            <div class="container">
+                <h2 data-content="Importer">
+                    Importer
+                </h2>
+
+                <form class="content">
+                    <label class="draggable-zone">
+                        <input type="file" name="" id="input-files">
+
+                        <img src="../assets//images/folder-upload.svg" alt="Upload" class="folder">
+                        
+                        <div class="text">
+                            <button type="button">
+                                Choisir des fichiers
+                            </button>
+
+                            <span>ou glissez-déposez</div></span>
+                        </div>
+                    </label>
                 </form>
             </div>
         </section>

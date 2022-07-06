@@ -196,7 +196,7 @@ main {
             }
         }
 
-        &.import-methods .content {
+        &.upload-methods .content {
             width: calc(100% - 2em);
 
             .methods {
@@ -242,6 +242,12 @@ main {
                             }
                         }
 
+                        span {
+                            position: relative;
+                            top: .2rem;
+                            font-size: .8rem;
+                        }
+
                         &:hover .custom-input {
                             border-color: var(--grey-5);
                         }
@@ -252,6 +258,64 @@ main {
 
                         &::after {
                             background: var(--secondary-color);
+                        }
+                    }
+                }
+            }
+        }
+
+        &.upload .container .content {
+            .draggable-zone {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 80vw;
+                max-width: 50em;
+                height: 40vw;
+                max-height: 25em;
+                border: 3px dashed var(--primary-color);
+                border-radius: 1em;
+
+                input {
+                    display: none;
+                    opacity: 0;
+                    position: absolute;
+                    z-index: -1;
+                    visibility: hidden;
+                }
+
+                img {
+                    width: 5em;
+                    filter: invert(15%);
+                }
+
+                .text {
+                    margin-top: 1em;
+                    color: var(--black-1);
+                    cursor: pointer;
+
+                    button {
+                        color: var(--secondary-color);
+                        background: none;
+                        outline: none;
+                        border: none;
+                        font-size: .9rem;
+                        font-family: "Poppins-SemiBold";
+                        transition: all 250ms ease;
+                        pointer-events: none;
+                    }
+                    
+                    span {
+                        position: relative;
+                        left: -.4rem;
+                        font-size: .9rem;
+                        font-family: "Poppins-Regular";
+                    }
+
+                    &:hover, &:focus {
+                        button {
+                            color: unset;
                         }
                     }
                 }
