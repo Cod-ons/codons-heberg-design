@@ -1,45 +1,12 @@
 main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background: var(--white-2);
 }
 
 main section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   padding: 2em 0;
 }
 
 main section .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: var(--white-1);
   padding: 1em;
   min-width: max(15em, 20%);
@@ -68,33 +35,7 @@ main section .container h2::after {
   transition: all .5s;
 }
 
-main section .container form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 main section .container form .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   width: 100%;
 }
 
@@ -163,19 +104,6 @@ main section .container:hover h2::after, main section .container:focus h2::after
 }
 
 main section.get-name .container .content .input-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 250px;
   height: 44px;
   background: var(--white-1);
@@ -333,16 +261,12 @@ main section.upload-methods .content .methods .prop input {
 }
 
 main section.upload-methods .content .methods .prop label {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   cursor: pointer;
   font-size: 1rem;
   font-family: "SourceSansPro-Light";
 }
 
 main section.upload-methods .content .methods .prop label .custom-input {
-  display: block;
   position: relative;
   background: var(--white-1);
   width: 12px;
@@ -393,19 +317,6 @@ main section.upload .container .content {
 }
 
 main section.upload .container .content .draggable-zone {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 80vw;
   max-width: 50em;
   min-height: 9.5em;
@@ -416,7 +327,6 @@ main section.upload .container .content .draggable-zone {
 }
 
 main section.upload .container .content .draggable-zone input {
-  display: none;
   opacity: 0;
   position: absolute;
   z-index: -1;

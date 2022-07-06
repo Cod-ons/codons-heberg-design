@@ -1,25 +1,8 @@
 main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 1.5em;
 }
 
 main .status {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   background: #ddda;
   min-width: 300px;
   width: calc(30% - 2.5em);
@@ -37,25 +20,14 @@ main .status .content {
 }
 
 main .status .content li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   font-family: 'SourceSansPro-SemiBold';
 }
 
 main .status .content li span {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  position: relative;
   font-family: 'SourceSansPro-Light';
   font-size: .9rem;
   top: 2px;
@@ -93,42 +65,18 @@ main .container {
 }
 
 main .container .header-infos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
   height: 3em;
   background: var(--primary-color);
 }
 
 main .container .header-infos .folder-opened {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: calc(100% - 40px);
   padding: 5px 8px;
   pointer-events: none;
 }
 
 main .container .header-infos .folder-opened .icon {
-  display: block;
   width: 25px;
   height: 25px;
   position: relative;
@@ -208,19 +156,6 @@ main .container form .content thead tr th {
 }
 
 main .container form .content thead tr th.select-all {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: 22px;
   height: 36px;
   padding: 0 15px;
@@ -245,19 +180,6 @@ main .container form .content tbody tr td.selector {
 }
 
 main .container form .content tbody tr td.selector .checkbox {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   height: 24px;
 }
 
@@ -298,7 +220,6 @@ main .container form .content input[type="checkbox"] {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  display: block;
   width: 18px;
   height: 18px;
   border: 1px solid var(--secondary-color);

@@ -1,0 +1,17 @@
+.d-block {display: block;}
+.d-flex {display: flex; flex-wrap: nowrap;}
+.d-inline-flex {display: inline-flex;}
+.d-none {display: none;}
+
+.align-center {align-items: center;}
+.align-f-end {align-items: flex-end;}
+
+.justify-baseline {justify-content: baseline;}
+.justify-center {justify-content: center;}
+.space-between {justify-content: space-between;}
+.space-evenly {justify-content: space-evenly;}
+
+.column {flex-direction: column;}
+.row {flex-direction: row;}
+
+.wrap {flex-wrap: wrap;}

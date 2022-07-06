@@ -13,6 +13,7 @@
     <meta name="author" content="Ezequiel FRIDEL ESCALONA">
 
     <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/sheet.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/login.css">
 
@@ -23,17 +24,16 @@
 
 </head>
 <body>
-
     <main class="">
-        <div class="forms">
-            <div class="login">
-                <div class="circle"></div>
+        <div class="forms d-flex">
+            <div class="login d-flex justify-center">
+                <div class="circle d-block"></div>
 
-                <div class="form-container">
+                <div class="form-container d-flex column align-center justify-center">
                     <h1>Connexion</h1>
 
-                    <form class="form-content">
-                        <div class="input-box">
+                    <form class="form-content d-flex column align-center">
+                        <div class="input-box d-flex column align-center justify-center">
                             <input type="text" name="username" id="username" placeholder="Nom d'utilisateur ou email" autocomplete="username" required>
 
                             <label for="username">
@@ -41,10 +41,10 @@
                             </label>
                         </div>
 
-                        <div class="input-box input-password">
+                        <div class="input-box d-flex column align-center justify-center input-password">
                             <input type="password" name="password" id="password" placeholder="Mot de passe" data-type="password" autocomplete="current-password" required>
 
-                            <button class="password-visibility" id="toggle-visibility" type="button">
+                            <button class="password-visibility d-block" id="toggle-visibility" type="button">
                                 <img src="../assets/images/eye.svg" data-alternative-src="../assets/images/eye-slash.svg" alt="Show Password">
                             </button>
 
@@ -53,8 +53,8 @@
                             </label>
                         </div>
 
-                        <div class="remember-me">
-                            <input type="checkbox" name="remember-me" id="remember-me">
+                        <div class="remember-me d-flex align-center justify-baseline">
+                            <input type="checkbox" name="remember-me" id="remember-me" class="d-block">
 
                             <label for="remember-me">
                                 Se souvenir de moi
@@ -62,12 +62,12 @@
                             </label>
                         </div>
 
-                        <button type="submit" class="submit-btn">
+                        <button type="submit" class="submit-btn d-flex column align-center justify-center">
                             <span class="submit-content">
                                 Se connecter
                             </span>
 
-                            <div class="loading">
+                            <div class="loading d-none column align-center justify-center">
                                 <img src="../assets/images/loading-part.svg" alt="Loading">
                                 <img src="../assets/images/loading-part.svg" alt="Loading">
                             </div>
@@ -75,8 +75,8 @@
                     </form>
                 </div>
 
-                <div class="alternative">
-                    <div class="content">
+                <div class="alternative d-flex column align-center justify-center">
+                    <div class="content d-flex column align-center">
                         <p>Vous êtes nouveau dans<br>notre communauté ?</p>
 
                         <button type="button" class="toggle-form">
@@ -86,12 +86,12 @@
                 </div>
             </div>
             
-            <div class="register">
-                <div class="form-container">
+            <div class="register d-flex justify-center">
+                <div class="form-container d-flex column align-center justify-center">
                     <h1>Inscription</h1>
 
-                    <form class="form-content">
-                        <div class="input-box">
+                    <form class="form-content d-flex column align-center">
+                        <div class="input-box d-flex column align-center justify-center">
                             <input type="text" name="r-username" id="r-username" placeholder="Nom d'utilisateur" autocomplete="username" required>
 
                             <label for="r-username">
@@ -99,7 +99,7 @@
                             </label>
                         </div>
 
-                        <div class="input-box">
+                        <div class="input-box d-flex column align-center justify-center">
                             <input type="email" name="email" id="email" placeholder="Adresse mail" autocomplete="email" required>
 
                             <label for="email">
@@ -107,7 +107,7 @@
                             </label>
                         </div>
 
-                        <div class="input-box input-password">
+                        <div class="input-box d-flex column align-center justify-center input-password">
                             <input type="password" name="password" id="passwd-1" placeholder="Mot de passe" data-type="password" autocomplete="new-password" required>
 
                             <label for="passwd-1">
@@ -115,7 +115,7 @@
                             </label>
                         </div>
 
-                        <div class="input-box input-password">
+                        <div class="input-box d-flex column align-center justify-center input-password">
                             <input type="password" name="confirm-password" id="passwd-2" placeholder="Mot de passe" data-type="password" autocomplete="new-password" required>
 
                             <label for="passwd-2">
@@ -123,20 +123,20 @@
                             </label>
                         </div>
 
-                        <div class="remember-me">
-                            <input type="checkbox" name="r-remember-me" id="r-remember-me">
+                        <div class="remember-me d-flex align-center justify-baseline">
+                            <input type="checkbox" name="r-remember-me" id="r-remember-me" class="d-block">
 
                             <label for="r-remember-me">
                                 J'accepte les <a href="#" style="--c: 'Conditions d\'Utilisation';">Conditions d'Utilisation</a>
                             </label>
                         </div>
 
-                        <button type="submit" class="submit-btn">
+                        <button type="submit" class="submit-btn d-flex column align-center justify-center">
                             <span class="submit-content">
                                 S'inscrire
                             </span>
 
-                            <div class="loading">
+                            <div class="loading d-none column align-center justify-center">
                                 <img src="../assets/images/loading-part.svg" alt="Loading">
                                 <img src="../assets/images/loading-part.svg" alt="Loading">
                             </div>
@@ -144,8 +144,8 @@
                     </form>
                 </div>
 
-                <div class="alternative">
-                    <div class="content">
+                <div class="alternative d-flex column align-center justify-center">
+                    <div class="content d-flex column align-center">
                         <p>Ce n'est pas la première<br>fois ?</p>
 
                         <button type="button" class="toggle-form">
@@ -154,11 +154,11 @@
                     </div>
                 </div>
 
-                <div class="circle"></div>
+                <div class="circle d-block"></div>
             </div>
         </div>
 
-        <div class="cache"></div>
+        <div class="cache d-block"></div>
     </main>
 
     <div class="page-loader">

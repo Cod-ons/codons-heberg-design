@@ -1,20 +1,10 @@
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     background: var(--white-2);
     
     section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         padding: 2em 0;
 
         .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             background: var(--white-1);
             padding: 1em;
             min-width: unquote("max(15em, 20%)");
@@ -43,15 +33,7 @@ main {
             }
     
             form {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-
                 .buttons {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: flex-end;
                     width: 100%;
 
                     .option {
@@ -116,10 +98,6 @@ main {
         }
 
         &.get-name .container .content .input-box {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             width: 250px;
             height: 44px;
             background: var(--white-1);
@@ -210,13 +188,11 @@ main {
                     input { appearance: none }
                     
                     label {
-                        display: inline-flex;
                         cursor: pointer;
                         font-size: 1rem;
                         font-family: "SourceSansPro-Light";
 
                         .custom-input {
-                            display: block;
                             position: relative;
                             background: var(--white-1);
                             width: 12px;
@@ -268,10 +244,6 @@ main {
             min-height: 10em;
 
             .draggable-zone {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
                 width: 80vw;
                 max-width: 50em;
                 min-height: 9.5em;
@@ -281,7 +253,6 @@ main {
                 border-radius: 1em;
 
                 input {
-                    display: none;
                     opacity: 0;
                     position: absolute;
                     z-index: -1;

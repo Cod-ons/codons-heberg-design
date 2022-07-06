@@ -13,59 +13,56 @@
     <meta name="author" content="Ezequiel FRIDEL ESCALONA">
 
     <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/sheet.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/home.css">
 
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
 
+    <script type="text/javascript" src="../assets/js/app.js"></script>
     <script type="text/javascript" src="../assets/js/custom-select.js"></script>
 
 </head>
 <body>
 
     <header>
-        <a href="#" class="title">
-            <h2>
-                <span><span>C</span>od'ons</span> Heberg
-            </h2>
-        </a>
+        <div class="container d-flex row space-between">
+            <a href="/" class="title d-flex">
+                <h2>
+                    <span><span>C</span>od'ons</span> Heberg
+                </h2>
+            </a>
 
-        <nav class="menu active">
-            <button class="toggle-btn">
-                <span></span>
-            </button>
+            <div class="menu d-flex">
+                <button type="button" class="menu-btn d-none column align-center justify-center">
+                    <span></span>
+                </button>
 
-            <ul>
-                <li><a href="#">Lien</a></li>
-                <li><a href="#">Lien</a></li>
-                <li>
-                    <div class="select">
-                        <select>
-                            <option selected>Lien</option>
-                            <option value="#lien1">Lien A</option>
-                            <option value="#lien2">Lien B</option>
-                            <option value="#lien3">Lien C</option>
-                        </select>
-                    </div>
-                </li>
-                <li><a href="#">Lien</a></li>
-            </ul>
+                <nav class="links">
+                    <ul class="d-inline-flex align-center">
+                        <li><a class="d-flex column justify-center" href="#">Lien</a></li>
+                        <li><a class="d-flex column justify-center" href="#">Lien</a></li>
+                        <li><a class="d-flex column justify-center" href="#">Lien</a></li>
+                        <li><a class="d-flex column justify-center" href="#">Lien</a></li>
+                    </ul>
+                </nav>
 
-            <div class="cache"></div>
-        </nav>
+                <div class="background d-block"></div>
+            </div>
+        </div>
+
+        <div class="fix d-block"></div>
     </header>
 
-    <div class="header-fix"></div>
-
-    <main>
-        <section class="title">
+    <main role="main" class="d-flex column">
+        <section class="title d-flex column align-center justify-center">
             <div class="backdrop">
                 <img src="../assets/images/servers.jpeg" alt="Cod'ons Heberg">
             </div>
 
-            <div class="container">
-                <div class="content">
+            <div class="container d-flex space-between wrap">
+                <div class="content d-flex column align-center justify-center">
                     <div class="title-box">
                         <h1>
                             <span><span>C</span>od'ons</span> Heberg
@@ -75,7 +72,7 @@
                     </div>
                 </div>
     
-                <div class="btn-box">
+                <div class="btn-box d-flex column align-center justify-center">
                     <button type="button" onclick="window.scrollTo(0, document.querySelector('.backdrop').clientHeight)">
                         Commencer dès maintenant
                     </button>
@@ -83,8 +80,8 @@
             </div>
         </section>
         
-        <section class="offers">
-            <div class="description">
+        <section class="offers d-flex column align-center justify-center">
+            <div class="description d-block">
                 <h2 class="title">
                     Nos meilleures offres
                 </h2>
@@ -94,8 +91,8 @@
                 </p>
             </div>
 
-            <div class="container">
-                <div class="box">
+            <div class="container d-flex space-evenly">
+                <div class="box d-flex column space-evenly">
                     <h3>Offre 1</h3>
 
                     <ul>
@@ -110,14 +107,14 @@
                         <span><span>0€</span>/mois</span>
                     </div>
 
-                    <div class="link">
+                    <div class="link d-inline-flex justify-center">
                         <button type="button">
                             C'est parti
                         </button>
                     </div>
                 </div>
 
-                <div class="box best">
+                <div class="box best d-flex column space-evenly">
                     <h3>Offre 2</h3>
 
                     <ul>
@@ -132,14 +129,14 @@
                         <span><span>1€</span>/mois</span>
                     </div>
 
-                    <div class="link">
+                    <div class="link d-inline-flex justify-center">
                         <button type="button">
                             C'est parti
                         </button>
                     </div>
                 </div>
 
-                <div class="box">
+                <div class="box d-flex column space-evenly">
                     <h3>Offre 3</h3>
 
                     <ul>
@@ -154,7 +151,7 @@
                         <span><span>2€</span>/mois</span>
                     </div>
 
-                    <div class="link">
+                    <div class="link d-inline-flex justify-center">
                         <button type="button">
                             C'est parti
                         </button>
@@ -163,33 +160,66 @@
             </div>
         </section>
 
-        <section class="others">
+        <section class="others d-flex column align-center justify-center">
             <!--  -->
         </section>
     </main>
 
-    <!-- <div class="loader-container">
-        <div class="page-loader">
+    <footer class="d-flex column">
+        <div class="container d-flex align-center space-evenly">
+            <div class="sec about">
+                <h3>A propos</h3>
+                
+                <ul class="content">
+                    <li><a href="#">Conditions Générales d'Utilisation</a></li>
+                    <li><a href="#">Conditions Générales de Vente</a></li>
+                    <li><a target="_blank" href="https://www.paypal.com/donate?hosted_button_id=BQ9VTYNAH3RRC">Faire un don</a></li>
+                    <li><a href="#">Données personnelles</a></li>
+                </ul>
+            </div>
+            
+            <span class="border d-block"></span>
+            
+            <div class="sec contact">
+                <h3>Nous contacter</h3>
+                
+                <ul class="content">
+                    <li><a href="#">Signaler une anomalie ou un abus</a></li>
+                    <li>
+                        <a target="_blank" href="https://github.com/TheRedMineTheRedMine">Ezequiel Dev</a>
+                        &ensp; — &ensp;
+                        <a target="_blank" href="https://github.com/Mapoto40">Mapoto40</a>
+                    </li>
+                    <li><a href="#">Lien</a></li>
+                    <li><a target="_blank" href="https://discord.gg/gpNXES9swT">Serveur Discord de support</a></li>
+                </ul>
+            </div>
+            
+            <span class="border d-block"></span>
+            
+            <div class="sec quick-links">
+                <h3>Liens rapides</h3>
+                
+                <ul class="content">
+                    <li><a target="_blank" href="https://wikijap.netlify.app">Wikijap</a></li>
+                    <li><a target="_blank" href="https://github.com/Cod-ons">Cod'ons</a></li>
+                    <li><a target="_blank" href="https://github.com/Cod-ons">Github</a></li>
+                    <li><a href="#">Remerciements</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright d-flex column align-center">
+            <p>Cod'ons Heberg &copy;&ensp; — &ensp; Copyright 2021 - 2023 &ensp; — &ensp; Tout droits réservés</p>
+        </div>
+    </footer>
+
+    <div class="loader-container d-flex column align-center justify-center">
+        <div class="page-loader  d-flex column align-center justify-center">
             <img src="../assets/images/loading-part.svg" alt="Loading">
             <img src="../assets/images/loading-part.svg" alt="Loading">
         </div>
-    </div> -->
-
-    <script type="text/javascript">
-        // setTimeout(() => document.querySelector('.loader-container').remove('load'), 2000);
-        // setTimeout(() => document.querySelector('.loader-container').remove(), 1000);
-        // window.scrollTo(0, document.body.scrollHeight);
-
-        // Header's menu
-        const menu = document.querySelector('header .menu');
-
-        document.body.addEventListener('click', (e) => {
-            if (e.composedPath().includes(menu))
-                menu?.classList.toggle('active');
-            else if (menu?.classList.contains('active'))
-                menu?.classList.remove('active');
-        });
-    </script>
+    </div>
 
 </body>
 </html>

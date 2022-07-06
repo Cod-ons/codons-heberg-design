@@ -150,29 +150,16 @@ body {
 }
 
 body header .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
   height: 100px;
   width: 100%;
   background: var(--black-1);
   position: fixed;
   top: 0;
   z-index: 6;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 body header .container .title, body header .container .menu {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -229,17 +216,6 @@ body header .container .title:hover h2 > span {
 
 body header .container .menu .menu-btn {
   position: relative;
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 50px;
   height: 50px;
   cursor: pointer;
@@ -292,13 +268,7 @@ body header .container .menu .menu-btn:hover::before, body header .container .me
 }
 
 body header .container .menu .links ul {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
   list-style: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 body header .container .menu .links ul li {
@@ -309,19 +279,9 @@ body header .container .menu .links ul li {
 }
 
 body header .container .menu .links ul li a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   text-align: center;
   width: 100%;
   min-height: 40px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   color: unset;
   text-decoration: none;
   border: 1px solid var(--primary-color);
@@ -344,7 +304,6 @@ body header .container .menu .links ul li a:hover {
 body header .container .menu .background {
   --menu-bg-size: max(300vh, 300vw);
   position: fixed;
-  display: block;
   top: calc(var(--menu-bg-size) * -.5);
   right: calc(var(--menu-bg-size) * -.5);
   width: 0;
@@ -419,36 +378,19 @@ body header .container .menu .background {
 }
 
 body header .fix {
-  display: block;
   height: 100px;
 }
 
 body footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
   width: 100%;
   background: var(--black-1);
 }
 
 body footer > div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   height: 100%;
 }
 
 body footer > div.container {
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
   padding: 20px 10px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -528,7 +470,6 @@ body footer > div.container .sec:hover h3::after {
 }
 
 body footer > div.container .border {
-  display: block;
   height: 8em;
   width: 1px;
   background: var(--white);
@@ -537,10 +478,6 @@ body footer > div.container .border {
 
 body footer > div.copyright {
   text-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   color: var(--white);
 }
 
@@ -558,19 +495,6 @@ body footer > div.copyright p {
 body .loader-container {
   --loader-size: max(150vh, 150vw);
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -581,19 +505,6 @@ body .loader-container {
 
 body .loader-container .page-loader {
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border-radius: 50%;
   background: var(--white-2);
   width: 0;

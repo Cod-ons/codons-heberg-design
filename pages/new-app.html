@@ -13,6 +13,7 @@
     <meta name="author" content="Ezequiel FRIDEL ESCALONA">
 
     <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/sheet.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/new-app.css">
 
@@ -23,44 +24,46 @@
     <script type="text/javascript" src="../assets/js/login.js"></script>
 
 </head>
-<body><!-- <body class="load"> -->
+<body class="load">
 
     <header>
-        <div class="container">
-            <a href="/" class="title">
+        <div class="container d-flex row space-between">
+            <a href="/" class="title d-flex">
                 <h2>
                     <span><span>C</span>od'ons</span> Heberg
                 </h2>
             </a>
 
-            <div class="menu">
-                <button type="button" class="menu-btn">
+            <div class="menu d-flex">
+                <button type="button" class="menu-btn d-none column align-center justify-center">
                     <span></span>
                 </button>
 
                 <nav class="links">
-                    <ul>
-                        <li><a href="#">Lien</a></li>
-                        <li><a href="#">Lien</a></li>
-                        <li><a href="#">Lien</a></li>
-                        <li><a href="#">Lien</a></li>
+                    <ul class="d-inline-flex align-center">
+                        <li><a class="d-flex column justify-center" href="#">Lien</a></li>
+                        <li><a class="d-flex column justify-center" href="#">Lien</a></li>
+                        <li><a class="d-flex column justify-center" href="#">Lien</a></li>
+                        <li><a class="d-flex column justify-center" href="#">Lien</a></li>
                     </ul>
                 </nav>
 
-                <div class="background"></div>
+                <div class="background d-block"></div>
             </div>
         </div>
 
-        <div class="fix"></div>
+        <div class="fix d-block"></div>
     </header>
 
-    <main role="main">
-        <section class="get-name" style="display: none;">
-            <div class="container">
-                <h2 data-content="Nouveau site">Nouveau site</h2>
+    <main role="main" class="d-flex column justify-center">
+        <section class="get-name d-flex column align-center justify-center">
+            <div class="container d-flex column align-center">
+                <h2 data-content="Nouveau site">
+                    Nouveau site
+                </h2>
             
-                <form class="content">
-                    <div class="input-box">
+                <form class="content d-flex column align-center">
+                    <div class="input-box d-flex column align-center justify-center">
                         <input type="text" name="app-name" id="app-name" placeholder="Nom du site" autocomplete="organization-title" autofocus required>
     
                         <label for="app-name">
@@ -68,7 +71,7 @@
                         </label>
                     </div>
 
-                    <div class="buttons">
+                    <div class="buttons d-flex space-between align-f-end">
                         <div class="fix"></div>
 
                         <button class="submit-btn" type="button">
@@ -79,19 +82,19 @@
             </div>
         </section>
 
-        <section class="upload-methods" style="display: none;">
-            <div class="container">
+        <section class="upload-methods d-flex align-center column justify-center d-none">
+            <div class="container d-flex column align-center">
                 <h2 data-content="Importer des fichiers">
                     Importer des fichiers
                 </h2>
 
-                <form class="content">
+                <form class="content d-flex column align-center">
                     <div class="methods">
                         <div class="prop">
                             <input type="radio" name="type" id="folder" checked>
 
-                            <label for="folder">
-                                <div class="custom-input"></div>
+                            <label for="folder" class="d-inline-flex">
+                                <div class="custom-input d-block"></div>
                                 Dossier
                             </label>
                         </div>
@@ -99,8 +102,8 @@
                         <div class="prop">
                             <input type="radio" name="type" id="files">
 
-                            <label for="files">
-                                <div class="custom-input"></div>
+                            <label for="files" class="d-inline-flex">
+                                <div class="custom-input d-block"></div>
                                 Fichiers
                             </label>
                         </div>
@@ -108,14 +111,14 @@
                         <div class="prop">
                             <input type="radio" name="type" id="zip">
 
-                            <label for="zip">
-                                <div class="custom-input"></div>
+                            <label for="zip" class="d-inline-flex">
+                                <div class="custom-input d-block"></div>
                                 ZIP file&ThickSpace;<span>(*.zip)</span>
                             </label>
                         </div>
                     </div>
 
-                    <div class="buttons">
+                    <div class="buttons d-flex space-between align-f-end">
                         <div class="option">
                             <a href="#">Passer</a>
                         </div>
@@ -129,15 +132,15 @@
             </div>
         </section>
 
-        <section class="upload">
-            <div class="container">
+        <section class="upload d-flex column justify align-center-center d-none">
+            <div class="container d-flex column align-center">
                 <h2 data-content="Importer">
                     Importer
                 </h2>
 
-                <form class="content">
-                    <label class="draggable-zone">
-                        <input type="file" name="" id="input-files">
+                <form class="content d-flex column align-center">
+                    <label class="draggable-zone d-flex column align-center justify-center">
+                        <input type="file" name="" id="input-files" class="d-none">
 
                         <img src="../assets//images/folder-upload.svg" alt="Upload" class="folder">
                         
@@ -154,8 +157,8 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
+    <footer class="d-flex column">
+        <div class="container d-flex align-center space-evenly">
             <div class="sec about">
                 <h3>A propos</h3>
                 
@@ -167,7 +170,7 @@
                 </ul>
             </div>
             
-            <span class="border"></span>
+            <span class="border d-block"></span>
             
             <div class="sec contact">
                 <h3>Nous contacter</h3>
@@ -184,7 +187,7 @@
                 </ul>
             </div>
             
-            <span class="border"></span>
+            <span class="border d-block"></span>
             
             <div class="sec quick-links">
                 <h3>Liens rapides</h3>
@@ -198,13 +201,13 @@
             </div>
         </div>
 
-        <div class="copyright">
+        <div class="copyright d-flex column align-center">
             <p>Cod'ons Heberg &copy;&ensp; — &ensp; Copyright 2021 - 2023 &ensp; — &ensp; Tout droits réservés</p>
         </div>
     </footer>
 
-    <div class="loader-container">
-        <div class="page-loader">
+    <div class="loader-container d-flex column align-center justify-center">
+        <div class="page-loader  d-flex column align-center justify-center">
             <img src="../assets/images/loading-part.svg" alt="Loading">
             <img src="../assets/images/loading-part.svg" alt="Loading">
         </div>
