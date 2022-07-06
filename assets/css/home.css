@@ -190,6 +190,7 @@ main section.title .container .btn-box button:hover, main section.title .contain
 main section.offers {
   min-height: calc(50% + 5em);
   height: auto;
+  margin-bottom: 1em;
 }
 
 main section.offers .description {
