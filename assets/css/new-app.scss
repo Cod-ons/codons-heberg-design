@@ -265,6 +265,8 @@ main {
         }
 
         &.upload .container .content {
+            min-height: 10em;
+
             .draggable-zone {
                 display: flex;
                 flex-direction: column;
@@ -272,6 +274,7 @@ main {
                 align-items: center;
                 width: 80vw;
                 max-width: 50em;
+                min-height: 9.5em;
                 height: 40vw;
                 max-height: 25em;
                 border: 3px dashed var(--primary-color);
@@ -294,6 +297,7 @@ main {
                     margin-top: 1em;
                     color: var(--black-1);
                     cursor: pointer;
+                    text-align: center;
 
                     button {
                         color: var(--secondary-color);

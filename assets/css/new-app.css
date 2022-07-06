@@ -388,6 +388,10 @@ main section.upload-methods .content .methods .prop input:checked ~ label .custo
   background: var(--secondary-color);
 }
 
+main section.upload .container .content {
+  min-height: 10em;
+}
+
 main section.upload .container .content .draggable-zone {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -404,6 +408,7 @@ main section.upload .container .content .draggable-zone {
           align-items: center;
   width: 80vw;
   max-width: 50em;
+  min-height: 9.5em;
   height: 40vw;
   max-height: 25em;
   border: 3px dashed var(--primary-color);
@@ -428,6 +433,7 @@ main section.upload .container .content .draggable-zone .text {
   margin-top: 1em;
   color: var(--black-1);
   cursor: pointer;
+  text-align: center;
 }
 
 main section.upload .container .content .draggable-zone .text button {
