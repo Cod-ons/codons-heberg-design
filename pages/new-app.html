@@ -21,7 +21,7 @@
     <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
 
     <script type="text/javascript" src="../assets/js/app.js"></script>
-    <script type="text/javascript" src="../assets/js/login.js"></script>
+    <script type="text/javascript" src="../assets/js/new-app.js"></script>
 
 </head>
 <body class="load">
@@ -56,11 +56,9 @@
     </header>
 
     <main role="main" class="d-flex column justify-center">
-        <section class="get-name d-flex column align-center justify-center">
+        <section class="get-name d-flex column align-center justify-center d-none">
             <div class="container d-flex column align-center">
-                <h2 data-content="Nouveau site">
-                    Nouveau site
-                </h2>
+                <h2 data-content="Nouveau site"></h2>
             
                 <form class="content d-flex column align-center">
                     <div class="input-box d-flex column align-center justify-center">
@@ -74,7 +72,7 @@
                     <div class="buttons d-flex space-between align-f-end">
                         <div class="fix"></div>
 
-                        <button class="submit-btn" type="button">
+                        <button class="submit-btn" type="submit">
                             Suivant
                         </button>
                     </div>
@@ -84,9 +82,7 @@
 
         <section class="upload-methods d-flex align-center column justify-center d-none">
             <div class="container d-flex column align-center">
-                <h2 data-content="Importer des fichiers">
-                    Importer des fichiers
-                </h2>
+                <h2 data-content="Importer des fichiers"></h2>
 
                 <form class="content d-flex column align-center">
                     <div class="methods">
@@ -132,13 +128,11 @@
             </div>
         </section>
 
-        <section class="upload d-flex column justify align-center-center d-none">
+        <section class="upload d-flex column justify align-center">
             <div class="container d-flex column align-center">
-                <h2 data-content="Importer">
-                    Importer
-                </h2>
+                <h2 data-content="Importer"></h2>
 
-                <form class="content d-flex column align-center">
+                <form class="content d-flex column align-center justify-center">
                     <label class="draggable-zone d-flex column align-center justify-center">
                         <input type="file" name="" id="input-files" class="d-none">
 
