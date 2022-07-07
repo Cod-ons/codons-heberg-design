@@ -6,7 +6,7 @@ window.addEventListener('load', function () {
     if (this.document.querySelector('footer')) {
         this.setInterval(() => {
             // main min heigth
-            var width = window.innerHeight - document.querySelector('footer').clientHeight - 100;
+            var width = window.innerHeight - document.querySelector('footer').clientHeight - 80;
         
             if (width < 250) width = 250;
             this.document.querySelector('main').style.minHeight = `${width}px`;

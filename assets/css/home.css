@@ -15,7 +15,7 @@ main section {
 }
 
 main section.title {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 80px);
   overflow: hidden;
 }
 

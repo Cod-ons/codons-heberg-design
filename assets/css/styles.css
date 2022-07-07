@@ -150,7 +150,7 @@ body {
 }
 
 body header .container {
-  height: 100px;
+  height: 80px;
   width: 100%;
   background: var(--black-1);
   position: fixed;
@@ -175,7 +175,7 @@ body header .container .title {
 
 body header .container .title h2 {
   color: var(--white-1);
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: 'Poppins-Regular';
   pointer-events: none;
 }
@@ -187,7 +187,7 @@ body header .container .title h2::after {
   position: relative;
   top: -3px;
   left: 0;
-  width: 36px;
+  width: calc(2rem - 4px);
   height: 3px;
   background: #25d;
   border-radius: 2px;
@@ -202,7 +202,7 @@ body header .container .title h2 > span {
 
 body header .container .title h2 > span span {
   color: #25d;
-  font-size: 3rem;
+  font-size: 2.4rem;
   font-family: 'Poppins-Bold', 'SourceSansPro-Bold', sans-serif;
 }
 
@@ -275,13 +275,13 @@ body header .container .menu .links ul li {
   margin: 0 10px;
   color: var(--white-1);
   font-family: "Poppins-Light";
-  min-width: 72px;
+  min-width: 68px;
 }
 
 body header .container .menu .links ul li a {
   text-align: center;
   width: 100%;
-  min-height: 40px;
+  height: 35px;
   color: unset;
   text-decoration: none;
   border: 1px solid var(--primary-color);
@@ -378,7 +378,7 @@ body header .container .menu .background {
 }
 
 body header .fix {
-  height: 100px;
+  height: 80px;
 }
 
 body footer {

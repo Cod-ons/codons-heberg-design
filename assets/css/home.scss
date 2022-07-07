@@ -13,16 +13,16 @@ main {
         margin: 0;
 
         &.title {
-            height: calc(100vh - 100px);
+            height: calc(100vh - 80px);
             overflow: hidden;
-            
+
             .backdrop {
                 position: absolute;
                 z-index: 0;
                 transform: scale(1, 115%);
                 width: 100%;
                 height: 100%;
-                
+
                 img {
                     width: 100%;
                     height: 100%;

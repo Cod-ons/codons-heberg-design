@@ -127,31 +127,31 @@ body {
     /* Header */
     header {
         .container {
-            height: 100px;
+            height: 80px;
             width: 100%;
             background: var(--black-1);
             position: fixed;
             top: 0;
             z-index: 6;
-        
+
             .title, .menu {
                 height: 100%;
                 align-items: center;
                 padding: 0 1em;
             }
-        
+
             .title {
                 margin-left: 10px;
                 text-decoration: none;
                 color: unset;
                 cursor: pointer;
-        
+
                 h2 {
                     color: var(--white-1);
-                    font-size: 2.5rem;
+                    font-size: 2rem;
                     font-family: 'Poppins-Regular';
                     pointer-events: none;
-        
+
                     &::after {
                         content: '';
                         display: block;
@@ -159,29 +159,29 @@ body {
                         position: relative;
                         top: -3px;
                         left: 0;
-                        width: 36px;
+                        width: calc(2rem - 4px);
                         height: 3px;
                         background: #25d;
                         border-radius: 2px;
                         transition: all .6s ease;
                     }
-            
+
                     > span {
                         transition: all .6s ease;
-            
+
                         span {
                             color: #25d;
-                            font-size: 3rem;
+                            font-size: 2.4rem;
                             font-family: 'Poppins-Bold', 'SourceSansPro-Bold', sans-serif;
                         }
                     }
                 }
-        
+
                 &:hover h2 {
                     &::after {
                         width: calc(50% + 5px);
                     }
-        
+
                     > span {
                         color: #25d;
                     }
@@ -246,12 +246,12 @@ body {
                             margin: 0 10px;
                             color: var(--white-1);
                             font-family: "Poppins-Light";
-                            min-width: 72px;
-                            
+                            min-width: 68px;
+
                             a {
                                 text-align: center;
                                 width: 100%;
-                                min-height: 40px;
+                                height: 35px;
                                 color: unset;
                                 text-decoration: none;
                                 border: 1px solid var(--primary-color);
@@ -348,12 +348,10 @@ body {
                 }
             }
         }
-    
-        .fix {
-            height: 100px;
-        }
+
+        .fix {height: 80px}
     }
-    
+
     /* Footer */
     footer {
         width: 100%;
