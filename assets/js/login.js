@@ -49,7 +49,14 @@ window.addEventListener('load', function () {
     toggleFormsButtons.forEach(function (a) {
         return a.onclick = function () {
             // Toggle form
-            main.classList.toggle('active');
+            if (main.classList.contains('register')) {
+                main.classList.remove('register');
+                main.classList.add('login');
+            } else {
+                main.classList.add('register');
+                main.classList.remove('login');
+            }
+
             // Disable inputs during animation
             disableInputs();
         };

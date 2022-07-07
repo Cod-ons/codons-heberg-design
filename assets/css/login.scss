@@ -435,7 +435,7 @@ main {
         }
     }
 
-    &.active {
+    &.register {
         .forms {
             .login {
                 .form-container {
@@ -518,7 +518,7 @@ main {
             left: calc(var(--cache-size) / -2.65) !important;
         }
 
-        &.active {
+        &.register {
             .forms {
                 .login .form-container {
                     left: 0;

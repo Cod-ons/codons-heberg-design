@@ -549,12 +549,12 @@ main div.cache {
           box-shadow: -25px 20px 10px #eee8;
 }
 
-main.active .forms .login .form-container {
+main.register .forms .login .form-container {
   left: 6%;
   opacity: 0;
 }
 
-main.active .forms .login .alternative {
+main.register .forms .login .alternative {
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   right: 6%;
@@ -562,20 +562,20 @@ main.active .forms .login .alternative {
   opacity: 0;
 }
 
-main.active .forms .login .circle {
+main.register .forms .login .circle {
   left: -30vh;
 }
 
-main.active .forms .register {
+main.register .forms .register {
   left: 0%;
   opacity: 1;
 }
 
-main.active .forms .register .circle {
+main.register .forms .register .circle {
   right: 0;
 }
 
-main.active .forms .register .alternative {
+main.register .forms .register .alternative {
   -webkit-transition: 0.5s ease 350ms;
   transition: 0.5s ease 350ms;
   left: 0;
@@ -583,7 +583,7 @@ main.active .forms .register .alternative {
   opacity: 1;
 }
 
-main.active .cache {
+main.register .cache {
   left: -48%;
   -webkit-box-shadow: 25px 20px 10px #eee8;
           box-shadow: 25px 20px 10px #eee8;
@@ -625,11 +625,11 @@ main.active .cache {
     top: calc(0px - var(--cache-size) + 10em) !important;
     left: calc(var(--cache-size) / -2.65) !important;
   }
-  main.active .forms .login .form-container {
+  main.register .forms .login .form-container {
     left: 0;
     top: -6%;
   }
-  main.active .cache {
+  main.register .cache {
     background: #000;
   }
 }
