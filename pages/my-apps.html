@@ -2,8 +2,8 @@
 <html lang="fr">
 <head>
 
-    <title>Page - Cod'ons Heberg</title>
-    
+    <title>My apps - Cod'ons Heberg</title>
+
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
@@ -13,8 +13,8 @@
     <meta name="description" content="Cod'ons Heberg, solution d'hébergement pour tous.">
     <meta name="author" content="Ezequiel FRIDEL ESCALONA">
 
-    <meta property="og:title" content="Cod'ons Heberg Design - Template page">
-    <meta property="og:url" content="https://cod-ons.github.io/codons-heberg-design/pages/page.html">
+    <meta property="og:title" content="Cod'ons Heberg Design - My apps">
+    <meta property="og:url" content="https://cod-ons.github.io/codons-heberg-design/pages/my-apps.html">
     <meta property="og:site_name" content="Cod'ons Heberg">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr-FR">
@@ -25,16 +25,17 @@
     <meta property="og:image:height" content="300">
     <meta property="og:image:alt" content="Cod'ons Heberg logo">
 
-    <meta name="twitter:title" content="Cod'ons Heberg Design - Template page">
+    <meta name="twitter:title" content="Cod'ons Heberg Design - My apps page">
     <meta name="twitter:card" content="summary_small_image">
     <meta name="twitter:description" content="Cod'ons Heberg Design, design de votre solution d'hébergement facilitée rien que pour vous.">
     <meta name="twitter:image" content="https://cod-ons.github.io/codons-heberg-design/assets/images/cod-ons-300.png">
     <meta property="twitter:domain" content="cod-ons.github.io">
-    <meta property="twitter:url" content="https://cod-ons.github.io/codons-heberg-design/pages/page.html">
+    <meta property="twitter:url" content="https://cod-ons.github.io/codons-heberg-design/pages/my-apps.html">
 
     <link type="text/css" rel="stylesheet" href="../assets/css/fonts.css">
     <link type="text/css" rel="stylesheet" href="../assets/css/sheet.css">
     <link type="text/css" rel="stylesheet" href="../assets/css/styles.css">
+    <link type="text/css" rel="stylesheet" href="../assets/css/my-apps.css">
 
     <link type="image/x-icon" rel="shortcut icon" href="./favicon.ico">
     <link type="image/x-icon" rel="shortcut icon" href="../assets/images/favicon.ico">
@@ -73,16 +74,92 @@
         <div class="fix d-block"></div>
     </header>
 
-    <main role="main" style="display: block; background: var(--white-1); min-width: 250px;">
-        <!-- Many content -->
+    <main role="main" class="d-flex column align-center">
+        <div class="head d-flex align-center space-between">
+            <div class="title d-flex column space-evenly">
+                <h1>Mes sites web</h1>
+                <p>Gérez ou créez ici vos sites web</p>
+            </div>
 
-        <script>
-            setTimeout(() => {
-                var width = window.innerHeight - document.querySelector('footer').clientHeight - 80;
-                if (width < 250) width = 250;
-                document.querySelector('main').style.height = `${width}px`;
-            }, 500);
-        </script>
+            <div class="btn-new-website">
+                <button type="button" class="d-flex justify-center align-center" onclick="window.location.replace('./new-app.html')">
+                    <img src="../assets/images/plus.svg" alt="New website image">
+                    New website
+                </button>
+            </div>
+        </div>
+
+        <div class="list-box d-flex">
+            <div class="list-infos d-flex justify-center align-center">
+                Mes sites :
+            </div>
+
+            <ul class="list-main d-flex column">
+                <li class="website-element d-flex column justify-center space-evenly" onclick="window.location.replace('./app.html')">
+                    <div class="top">
+                        <h3>my-app</h3>
+                    </div>
+
+                    <ul class="bottom d-flex">
+                        <li class="d-flex">
+                            Statut :
+                            <span class="website-status d-block"></span>
+                            <span>En ligne</span>
+                        </li>
+                        <li>BDD : <span>2 / 10</span></li>
+                        <li>Stockage : <span>8.5GB / 10GB (85%)</span></li>
+                    </ul>
+                </li>
+
+                <li class="website-element d-flex column justify-center space-evenly">
+                    <div class="top">
+                        <h3>cryptest</h3>
+                    </div>
+
+                    <ul class="bottom d-flex">
+                        <li class="d-flex">
+                            Statut :
+                            <span class="website-status d-block"></span>
+                            <span>En ligne</span>
+                        </li>
+                        <li>BDD : <span>1 / 1</span></li>
+                        <li>Stockage : <span>17MB / 500MB (3.4%)</span></li>
+                    </ul>
+                </li>
+
+                <li class="website-element d-flex column justify-center space-evenly">
+                    <div class="top">
+                        <h3>snt-web</h3>
+                    </div>
+
+                    <ul class="bottom d-flex">
+                        <li class="d-flex">
+                            Statut :
+                            <span class="website-status d-block"></span>
+                            <span>En ligne</span>
+                        </li>
+                        <li>BDD : <span>0 / 1</span></li>
+                        <li>Stockage : <span>4.55MB / 300MB (1.5%)</span></li>
+                    </ul>
+                </li>
+
+                <li class="website-element d-flex column justify-center space-evenly">
+                    <div class="top">
+                        <h3>no-one</h3>
+                    </div>
+
+                    <ul class="bottom d-flex">
+                        <li class="d-flex">
+                            Statut :
+                            <span class="website-status d-block"></span>
+                            <span>En ligne</span>
+                        </li>
+                        <li>BDD : <span>0 / 1</span></li>
+                        <li>Stockage : <span>0 / 300MB (0%)</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </main>
 
     <footer class="d-flex column">

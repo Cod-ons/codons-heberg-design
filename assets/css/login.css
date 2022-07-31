@@ -4,40 +4,32 @@ main {
   height: 100vh;
   background: var(--white);
 }
-
 main div {
   height: 100%;
 }
-
 main div.forms {
   width: 100vw;
 }
-
 main div.forms > div {
   position: relative;
   height: 100%;
   width: 50%;
-  -webkit-transition: ease-out all 0.7s;
   transition: ease-out all 0.7s;
 }
-
 main div.forms > div .circle {
   position: fixed;
   bottom: 0;
   width: 30vh;
   height: 30vh;
   background: var(--primary-color);
-  opacity: .88;
-  -webkit-transition: all 0.7s ease;
+  opacity: 0.88;
   transition: all 0.7s ease;
 }
-
 main div.forms > div .alternative {
   position: fixed;
   z-index: 2;
   width: 50%;
 }
-
 main div.forms > div .alternative .content {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -47,26 +39,23 @@ main div.forms > div .alternative .content {
   gap: 5px;
   text-align: center;
 }
-
 main div.forms > div .alternative .content p {
-  font-family: 'Poppins-Regular';
+  font-family: "Poppins-Regular";
   font-size: 1.1rem;
   color: var(--white);
-  text-shadow: 3px 3px 2px #fff6;
+  text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.4);
 }
-
 main div.forms > div .alternative .content button {
   margin-top: 1em;
   border: 3px solid var(--white);
   background: transparent;
-  font-family: 'SourceSansPro-SemiBold';
+  font-family: "SourceSansPro-SemiBold";
   font-size: 1rem;
   color: var(--white);
   width: 120px;
   height: 36px;
   border-radius: 18px;
   cursor: pointer;
-  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -74,30 +63,24 @@ main div.forms > div .alternative .content button {
           user-select: none;
   opacity: 1;
 }
-
 main div.forms > div .alternative .content button:hover, main div.forms > div .alternative .content button:focus {
   opacity: 75%;
 }
-
 main div.forms > div .form-container {
   position: relative;
   width: 100%;
   left: 0;
   opacity: 1;
-  -webkit-transition: ease-out all 0.7s;
   transition: ease-out all 0.7s;
 }
-
 main div.forms > div .form-container h1 {
-  font-family: 'Poppins-Bold';
-  margin-bottom: .6em;
+  font-family: "Poppins-Bold";
+  margin-bottom: 0.6em;
   color: var(--black-2);
 }
-
 main div.forms > div .form-container .form-content {
   gap: 4px;
 }
-
 main div.forms > div .form-container .form-content .input-box {
   width: 250px;
   height: 44px;
@@ -106,76 +89,58 @@ main div.forms > div .form-container .form-content .input-box {
   border-radius: 5px;
   position: relative;
   margin: 10px 0;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
   /* Show input */
 }
-
 main div.forms > div .form-container .form-content .input-box input {
   border: none;
   outline: none;
   background: none;
   font-size: 1rem;
-  font-family: 'SourceSansPro-Regular';
+  font-family: "SourceSansPro-Regular";
   width: calc(100% - 20px);
   height: 100%;
   padding: 0 10px;
-  -webkit-transform: translateY(-3px);
-          transform: translateY(-3px);
+  transform: translateY(-3px);
   color: var(--black-3);
 }
-
-main div.forms > div .form-container .form-content .input-box input::-webkit-input-placeholder {
+main div.forms > div .form-container .form-content .input-box input::-moz-placeholder {
   color: transparent;
-  font-family: 'SourceSansPro-Light';
-  -webkit-transition: all 0.4s;
+  font-family: "SourceSansPro-Light";
+  -moz-transition: all 0.4s;
   transition: all 0.4s;
-  -webkit-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+       user-select: none;
 }
-
 main div.forms > div .form-container .form-content .input-box input:-ms-input-placeholder {
   color: transparent;
-  font-family: 'SourceSansPro-Light';
-  -webkit-transition: all 0.4s;
+  font-family: "SourceSansPro-Light";
+  -ms-transition: all 0.4s;
   transition: all 0.4s;
   -ms-user-select: none;
       user-select: none;
 }
-
-main div.forms > div .form-container .form-content .input-box input::-ms-input-placeholder {
-  color: transparent;
-  font-family: 'SourceSansPro-Light';
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-  -ms-user-select: none;
-      user-select: none;
-}
-
 main div.forms > div .form-container .form-content .input-box input::placeholder {
   color: transparent;
-  font-family: 'SourceSansPro-Light';
-  -webkit-transition: all 0.4s;
+  font-family: "SourceSansPro-Light";
   transition: all 0.4s;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
-
 main div.forms > div .form-container .form-content .input-box label {
   position: absolute;
   left: 5px;
   padding: 2px 3px;
-  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   cursor: text;
   color: var(--grey-7);
   background: var(--white);
   transition: all 0.4s ease;
-  font-family: 'SourceSansPro-Regular';
+  font-family: "SourceSansPro-Regular";
   /* Default hide */
-  animation: input-animate .4s ease reverse;
+  animation: input-animate 0.4s ease reverse;
   top: 8px;
   font-size: 1rem;
   -webkit-user-select: none;
@@ -183,72 +148,52 @@ main div.forms > div .form-container .form-content .input-box label {
       -ms-user-select: none;
           user-select: none;
 }
-
 main div.forms > div .form-container .form-content .input-box:hover {
   border: 2px solid var(--black-3);
 }
-
 main div.forms > div .form-container .form-content .input-box.focused, main div.forms > div .form-container .form-content .input-box.complete {
   border: 2px solid var(--secondary-color);
 }
-
-main div.forms > div .form-container .form-content .input-box.focused input::-webkit-input-placeholder, main div.forms > div .form-container .form-content .input-box.complete input::-webkit-input-placeholder {
+main div.forms > div .form-container .form-content .input-box.focused input::-moz-placeholder, main div.forms > div .form-container .form-content .input-box.complete input::-moz-placeholder {
   color: var(--grey-3);
 }
-
 main div.forms > div .form-container .form-content .input-box.focused input:-ms-input-placeholder, main div.forms > div .form-container .form-content .input-box.complete input:-ms-input-placeholder {
   color: var(--grey-3);
 }
-
-main div.forms > div .form-container .form-content .input-box.focused input::-ms-input-placeholder, main div.forms > div .form-container .form-content .input-box.complete input::-ms-input-placeholder {
-  color: var(--grey-3);
-}
-
 main div.forms > div .form-container .form-content .input-box.focused input::placeholder, main div.forms > div .form-container .form-content .input-box.complete input::placeholder {
   color: var(--grey-3);
 }
-
-main div.forms > div .form-container .form-content .input-box.focused label,
-main div.forms > div .form-container .form-content .input-box.complete label {
-  -webkit-animation: input-animate .4s ease;
-          animation: input-animate .4s ease;
+main div.forms > div .form-container .form-content .input-box.focused label, main div.forms > div .form-container .form-content .input-box.complete label {
+  -webkit-animation: input-animate 0.4s ease;
+          animation: input-animate 0.4s ease;
   color: var(--secondary-color);
   top: -12px;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
-
 main div.forms > div .form-container .form-content .input-box.input-password .password-visibility {
   position: absolute;
   right: 10px;
   border: none;
   outline: none;
   background: none;
-  -webkit-transition: all 0.4s linear;
   transition: all 0.4s linear;
   opacity: 0;
   pointer-events: none;
   cursor: pointer;
   height: 20px;
 }
-
 main div.forms > div .form-container .form-content .input-box.input-password .password-visibility img {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-
-main div.forms > div .form-container .form-content .input-box.input-password.focused .password-visibility,
-main div.forms > div .form-container .form-content .input-box.input-password.complete .password-visibility {
-  opacity: .5;
+main div.forms > div .form-container .form-content .input-box.input-password.focused .password-visibility, main div.forms > div .form-container .form-content .input-box.input-password.complete .password-visibility {
+  opacity: 0.5;
   pointer-events: initial;
 }
-
-main div.forms > div .form-container .form-content .input-box.input-password.focused .password-visibility:hover, main div.forms > div .form-container .form-content .input-box.input-password.focused .password-visibility:focus,
-main div.forms > div .form-container .form-content .input-box.input-password.complete .password-visibility:hover,
-main div.forms > div .form-container .form-content .input-box.input-password.complete .password-visibility:focus {
+main div.forms > div .form-container .form-content .input-box.input-password.focused .password-visibility:hover, main div.forms > div .form-container .form-content .input-box.input-password.focused .password-visibility:focus, main div.forms > div .form-container .form-content .input-box.input-password.complete .password-visibility:hover, main div.forms > div .form-container .form-content .input-box.input-password.complete .password-visibility:focus {
   opacity: 85%;
 }
-
 @-webkit-keyframes input-animate {
   from {
     top: 8px;
@@ -256,10 +201,9 @@ main div.forms > div .form-container .form-content .input-box.input-password.com
   }
   to {
     top: -12px;
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 }
-
 @keyframes input-animate {
   from {
     top: 8px;
@@ -267,16 +211,14 @@ main div.forms > div .form-container .form-content .input-box.input-password.com
   }
   to {
     top: -12px;
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 }
-
 main div.forms > div .form-container .form-content .remember-me {
   width: 100%;
   height: 30px;
-  margin: .5em;
+  margin: 0.5em;
 }
-
 main div.forms > div .form-container .form-content .remember-me input {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -287,27 +229,22 @@ main div.forms > div .form-container .form-content .remember-me input {
   height: 20px;
   border-radius: 10px;
   background: var(--white-2);
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   overflow: hidden;
-  -webkit-box-shadow: 2px -2px 1px var(--white-3);
-          box-shadow: 2px -2px 1px var(--white-3);
+  box-shadow: 2px -2px 1px var(--white-3);
 }
-
 main div.forms > div .form-container .form-content .remember-me input::before {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   top: 0;
   width: 0;
   height: 100%;
-  background: #37eb;
-  -webkit-transition: all 0.4s ease-in-out;
+  background: rgba(51, 119, 238, 0.7333333333);
   transition: all 0.4s ease-in-out;
 }
-
 main div.forms > div .form-container .form-content .remember-me input::after {
-  content: '';
+  content: "";
   position: relative;
   display: block;
   width: 20px;
@@ -315,48 +252,37 @@ main div.forms > div .form-container .form-content .remember-me input::after {
   border-radius: 50%;
   background: var(--white);
   left: 0;
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  -webkit-transform: scale(80%);
-          transform: scale(80%);
+  transform: scale(80%);
 }
-
 main div.forms > div .form-container .form-content .remember-me input:checked {
   background: var(--white-1);
 }
-
 main div.forms > div .form-container .form-content .remember-me input:checked::before {
   width: 100%;
 }
-
 main div.forms > div .form-container .form-content .remember-me input:checked::after {
   left: 20px;
 }
-
 main div.forms > div .form-container .form-content .remember-me input:hover, main div.forms > div .form-container .form-content .remember-me input:focus {
-  -webkit-box-shadow: 2px -2px 1px var(--grey-1);
-          box-shadow: 2px -2px 1px var(--grey-1);
+  box-shadow: 2px -2px 1px var(--grey-1);
 }
-
 main div.forms > div .form-container .form-content .remember-me label {
   margin-left: 4px;
-  font-family: 'Poppins-Light';
-  font-size: .9rem;
-  -webkit-transform: translateY(1px);
-          transform: translateY(1px);
+  font-family: "Poppins-Light";
+  font-size: 0.9rem;
+  transform: translateY(1px);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
-
 main div.forms > div .form-container .form-content .remember-me label a {
   cursor: help;
-  font-family: 'Arial';
+  font-family: "Arial";
   text-decoration: none;
   color: var(--secondary-color);
 }
-
 main div.forms > div .form-container .form-content .remember-me label a::after {
   content: var(--c);
   display: block;
@@ -370,14 +296,11 @@ main div.forms > div .form-container .form-content .remember-me label a::after {
   height: 1px;
   opacity: 0;
   background: var(--secondary-color);
-  -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
-
 main div.forms > div .form-container .form-content .remember-me label a:hover::after {
   opacity: 1;
 }
-
 main div.forms > div .form-container .form-content .submit-btn {
   border: none;
   outline: none;
@@ -387,153 +310,116 @@ main div.forms > div .form-container .form-content .submit-btn {
   border-radius: 18px;
   cursor: pointer;
   position: relative;
-  margin-top: .8em;
-  -webkit-box-shadow: 3px -3px #37e9;
-          box-shadow: 3px -3px #37e9;
-  -webkit-transition: all 0.4s ease;
+  margin-top: 0.8em;
+  box-shadow: 3px -3px rgba(51, 119, 238, 0.6);
   transition: all 0.4s ease;
 }
-
 main div.forms > div .form-container .form-content .submit-btn .submit-content {
   color: var(--white);
   font-size: 1rem;
-  font-family: 'SourceSansPro-SemiBold';
+  font-family: "SourceSansPro-SemiBold";
   pointer-events: none;
 }
-
 main div.forms > div .form-container .form-content .submit-btn .loading {
   position: relative;
   width: 100%;
   height: 100%;
   background: transparent;
 }
-
 main div.forms > div .form-container .form-content .submit-btn.submit {
   cursor: progress;
 }
-
 main div.forms > div .form-container .form-content .submit-btn.submit .submit-content {
   display: none;
 }
-
 main div.forms > div .form-container .form-content .submit-btn.submit .loading {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 main div.forms > div .form-container .form-content .submit-btn.submit .loading img {
   position: absolute;
   width: 25px;
   -webkit-animation: loading-animation 0.7s cubic-bezier(0.45, 0.155, 0.7, 1) infinite;
           animation: loading-animation 0.7s cubic-bezier(0.45, 0.155, 0.7, 1) infinite;
 }
-
 main div.forms > div .form-container .form-content .submit-btn.submit .loading img:nth-child(2) {
   -webkit-animation-delay: 135ms;
           animation-delay: 135ms;
 }
-
 @-webkit-keyframes loading-animation {
   from {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    transform: rotate(0);
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 @keyframes loading-animation {
   from {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
+    transform: rotate(0);
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 main div.forms > div .form-container .form-content .submit-btn::after {
   position: absolute;
-  content: '';
+  content: "";
   display: block;
-  background: #fff3;
+  background: rgba(255, 255, 255, 0.2);
   width: 100%;
   height: 100%;
   left: -102%;
   pointer-events: none;
-  -webkit-transition: all .6s ease;
-  transition: all .6s ease;
-  -webkit-transform: scale(102%);
-          transform: scale(102%);
+  transition: all 0.6s ease;
+  transform: scale(102%);
 }
-
 main div.forms > div .form-container .form-content .submit-btn.submit, main div.forms > div .form-container .form-content .submit-btn:hover, main div.forms > div .form-container .form-content .submit-btn:focus {
-  -webkit-box-shadow: 3px -3px #37e5;
-          box-shadow: 3px -3px #37e5;
+  box-shadow: 3px -3px rgba(51, 119, 238, 0.3333333333);
 }
-
 main div.forms > div .form-container .form-content .submit-btn.submit::after, main div.forms > div .form-container .form-content .submit-btn:hover::after, main div.forms > div .form-container .form-content .submit-btn:focus::after {
   left: 0;
 }
-
 main div.forms > div.login {
   left: 0;
   opacity: 1;
 }
-
 main div.forms > div.login .circle {
   left: 0;
   border-radius: 0 100% 0 0;
-  -webkit-box-shadow: 0 -5px 15px 15px var(--white-1);
-          box-shadow: 0 -5px 15px 15px var(--white-1);
+  box-shadow: 0 -5px 15px 15px var(--white-1);
 }
-
 main div.forms > div.login .alternative {
-  -webkit-transition: 0.5s ease 350ms;
   transition: 0.5s ease 350ms;
   right: 0;
   visibility: visible;
   opacity: 1;
 }
-
 main div.forms > div.register {
   left: -6%;
   opacity: 0;
 }
-
 main div.forms > div.register .form-container .form-content .input-box {
   width: 300px;
 }
-
 main div.forms > div.register .form-container .form-content .remember-me label a {
   cursor: pointer;
 }
-
 main div.forms > div.register .alternative {
-  -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   left: 6%;
   visibility: hidden;
   opacity: 0;
 }
-
 main div.forms > div.register .circle {
   right: -30vh;
   border-radius: 100% 0 0 0;
-  -webkit-box-shadow: 8px -5px 15px 15px #eee;
-          box-shadow: 8px -5px 15px 15px #eee;
+  box-shadow: 8px -5px 15px 15px #eee;
 }
-
 main div.forms > div button {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
-
 main div.cache {
   position: fixed;
   background: radial-gradient(circle at center, var(--primary-color) 0%, #fe8 85%);
@@ -541,60 +427,45 @@ main div.cache {
   left: 48%;
   height: 200vh;
   width: 200vh;
-  -webkit-transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) all 0.7s;
   transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) all 0.7s;
   border-radius: 50%;
   z-index: 1;
-  -webkit-box-shadow: -25px 20px 10px #eee8;
-          box-shadow: -25px 20px 10px #eee8;
+  box-shadow: -25px 20px 10px rgba(238, 238, 238, 0.5333333333);
 }
-
 main.register .forms .login .form-container {
   left: 6%;
   opacity: 0;
 }
-
 main.register .forms .login .alternative {
-  -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   right: 6%;
   visibility: hidden;
   opacity: 0;
 }
-
 main.register .forms .login .circle {
   left: -30vh;
 }
-
 main.register .forms .register {
   left: 0%;
   opacity: 1;
 }
-
 main.register .forms .register .circle {
   right: 0;
 }
-
 main.register .forms .register .alternative {
-  -webkit-transition: 0.5s ease 350ms;
   transition: 0.5s ease 350ms;
   left: 0;
   visibility: visible;
   opacity: 1;
 }
-
 main.register .cache {
   left: -48%;
-  -webkit-box-shadow: 25px 20px 10px #eee8;
-          box-shadow: 25px 20px 10px #eee8;
+  box-shadow: 25px 20px 10px rgba(238, 238, 238, 0.5333333333);
 }
 
 @media only screen and (max-width: 600px) {
   main .forms {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   main .forms .login {
     width: 100%;
@@ -632,5 +503,4 @@ main.register .cache {
   main.register .cache {
     background: #000;
   }
-}
-/*# sourceMappingURL=login.css.map */
+}/*# sourceMappingURL=login.css.map */

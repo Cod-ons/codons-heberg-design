@@ -1,0 +1,164 @@
+main {
+    background: var(--white-1);
+    min-width: 250px;
+
+    .head {
+        width: calc(100vw - 4em);
+        padding: 0 2em;
+
+        .title {
+            padding: 1.5em;
+
+            h1 {
+                font-family: 'SourceSansPro-SemiBold';
+                font-size: 2.5rem;
+            }
+
+            p {
+                position: relative;
+                top: 10px;
+                font-family: 'Poppins-Light';
+                font-size: .8rem;
+            }
+        }
+        
+        .btn-new-website {
+            padding-right: 2em;
+
+            button {
+                padding: 6px 10px;
+                border: 1px solid #3334;
+                background: #fffe;
+                border-radius: 5px;
+                box-shadow: 0 0 10px #6671,
+                            0 0 5px #bbb8,
+                            inset 1px 1px 2px var(--white);
+                cursor: pointer;
+                transition: all 250ms;
+                
+                img {
+                    position: relative;
+                    top: 3px;
+                    margin-right: 2px;
+                    width: 20px;
+                    height: 20px;
+                    filter: invert(100%);
+                }
+
+                &:hover {
+                    border-color: #666;
+                    box-shadow: 0 0 5px #bbb8,
+                                inset 1px 1px 2px var(--white);
+                }
+            }
+        }
+    }
+
+    .list-box {
+        position: relative;
+        margin: 3.5em 0;
+        width: calc(100vw - 100px);
+        background: var(--white-3);
+        box-shadow: 4px 4px 10px 2px var(--grey-1);
+
+        .list-infos {
+            width: 300px;
+            font-family: 'SourceSansPro-SemiBold';
+            font-size: 2rem;
+        }
+
+        .list-main {
+            position: relative;
+            padding: 5px 0;
+            background: var(--black-1);
+            width: calc(100vw - 400px);
+            max-height: 300px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            z-index: 2;
+
+            .website-element {
+                width: calc(100% - 20px);
+                min-height: 80px;
+                margin: 5px 0 5px 10px;
+                border: 2px solid var(--primary-color);
+                background: #eee;
+                border-radius: 5px;
+                transition: all .3s;
+                transform: none;
+
+                .top {
+                    padding-left: 1em;
+
+                    h3 {
+                        font-size: 1.3rem;
+                        font-family: 'SourceSansPro-SemiBold';
+                        font-weight: 900;
+                        width: fit-content;
+
+                        &::after {
+                            content: '';
+                            display: block;
+                            position: relative;
+                            width: 100%;
+                            height: 2px;
+                            background: var(--black-3);
+                            opacity: 0;
+                            transition: all .4s;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .bottom {
+                    padding-left: .5em;
+                    list-style: none;
+
+                    li {
+                        font-size: .8rem;
+                        padding: 8px;
+                        color: var(--grey-4);
+                        font-family: "Poppins-SemiBold";
+
+                        span:not(.website-status) {
+                            position: relative;
+                            top: 1px;
+                            left: 1px;
+                            font-size: 12px;
+                            font-family: "Poppins-Regular";
+                        }
+
+                        span.website-status {
+                            margin: 0 4px 0 5px;
+                            width: .8rem;
+                            height: .8rem;
+                            border-radius: .4rem;
+                            background: #8d6;
+                        }
+                    }
+                }
+
+                &:last-child {
+                    border-bottom: 1px solid var(--primary-color);
+                }
+
+                &:hover {
+                    background: var(--white);
+                    transform: scale(101%);
+
+                    .top h3::after {
+                        opacity: 95%;
+                    }
+                }
+            }
+
+            &::-webkit-scrollbar-track {
+                background: var(--black-1);
+            }
+
+            &::-webkit-scrollbar-thumb {
+                border-color: var(--black-1);
+            }
+        }
+    }
+}
