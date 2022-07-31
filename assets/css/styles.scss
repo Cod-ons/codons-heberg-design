@@ -133,6 +133,7 @@ body {
             position: fixed;
             top: 0;
             z-index: 6;
+            box-shadow: 0 2px 20px 20px #22221e30;
 
             .title, .menu {
                 height: 100%;
@@ -356,6 +357,7 @@ body {
     footer {
         width: 100%;
         background: var(--black-1);
+        box-shadow: 0 -2px 20px 20px #22221e30;
         
         > div {
             height: 100%;
