@@ -176,6 +176,11 @@ body header .container .title h2::after {
   border-radius: 2px;
   transition: all 0.6s ease;
 }
+@media screen and (max-width: 390px) {
+  body header .container .title h2::after {
+    display: none;
+  }
+}
 body header .container .title h2 > span {
   transition: all 0.6s ease;
 }

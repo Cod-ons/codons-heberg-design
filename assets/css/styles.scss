@@ -167,6 +167,10 @@ body {
                         transition: all .6s ease;
                     }
 
+                    @media screen and (max-width: 390px) {
+                        &::after {display: none;}
+                    }
+
                     > span {
                         transition: all .6s ease;
 
