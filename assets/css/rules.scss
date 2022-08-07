@@ -1,0 +1,76 @@
+main {
+    padding: .5em 0;
+
+    .title {
+        margin: 1.5em;
+
+        h1 {
+            text-align: center;
+            position: relative;
+            font-family: 'SourceSansPro-SemiBold';
+
+            &::after {
+                content: '';
+                display: block;
+                height: 3px;
+                width: 20%;
+                position: relative;
+                background: var(--primary-color);
+                left: 40%;
+                top: 5px;
+            }
+        }
+    }
+
+    .container {
+        padding: 1.5em;
+
+        article {
+            margin: 1.2em 0;
+            padding-right: 5px;
+
+            h2 {
+                &::before {
+                    content: 'Article ' attr(data-id) ' : ';
+                }
+
+                &::after {
+                    content: 'Article ' attr(data-id);
+                    display: block;
+                    height: 3px;
+                    width: fit-content;
+                    position: relative;
+                    color: transparent;
+                    bottom: 2px;
+                    background: var(--black);
+                    border-radius: 2px;
+                }
+            }
+
+            > h2, > h3 {
+                font-family: "Poppins-Bold";
+                font-size: larger;
+            }
+
+            .content {
+                margin-top: 5px;
+                font-family: 'Arial Narrow', Arial, sans-serif;
+                font-size: .9rem;
+            }
+
+            .website::before {
+                content: "Cod'ons Heberg ©";
+            }
+
+            .author, .website::before {
+                font-family: "SourceSansPro-Italic";
+            }
+
+            &:nth-child(1) {
+                margin-top: 0;
+            }
+        }
+
+        q { &::before, &::after { content: '"'; }}
+    }
+}

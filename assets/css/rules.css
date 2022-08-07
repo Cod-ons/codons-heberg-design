@@ -1,0 +1,66 @@
+@charset "UTF-8";
+main {
+  padding: 0.5em 0;
+}
+main .title {
+  margin: 1.5em;
+}
+main .title h1 {
+  text-align: center;
+  position: relative;
+  font-family: "SourceSansPro-SemiBold";
+}
+main .title h1::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 20%;
+  position: relative;
+  background: var(--primary-color);
+  left: 40%;
+  top: 5px;
+}
+main .container {
+  padding: 1.5em;
+}
+main .container article {
+  margin: 1.2em 0;
+  padding-right: 5px;
+}
+main .container article h2::before {
+  content: "Article " attr(data-id) " : ";
+}
+main .container article h2::after {
+  content: "Article " attr(data-id);
+  display: block;
+  height: 3px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  color: transparent;
+  bottom: 2px;
+  background: var(--black);
+  border-radius: 2px;
+}
+main .container article > h2, main .container article > h3 {
+  font-family: "Poppins-Bold";
+  font-size: larger;
+}
+main .container article .content {
+  margin-top: 5px;
+  font-family: "Arial Narrow", Arial, sans-serif;
+  font-size: 0.9rem;
+}
+main .container article .website::before {
+  content: "Cod'ons Heberg ©";
+}
+main .container article .author, main .container article .website::before {
+  font-family: "SourceSansPro-Italic";
+}
+main .container article:nth-child(1) {
+  margin-top: 0;
+}
+main .container q::before, main .container q::after {
+  content: '"';
+}/*# sourceMappingURL=rules.css.map */
