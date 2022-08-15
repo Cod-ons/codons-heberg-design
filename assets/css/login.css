@@ -1,22 +1,32 @@
-main {
-  position: relative;
+body, main {
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
+}
+
+main {
+  --circle-space: 3em;
   background: var(--white);
 }
-main div {
+main .container {
   height: 100%;
-}
-main div.forms {
   width: 100vw;
 }
-main div.forms > div {
-  position: relative;
+main .container > div {
+  position: absolute;
+  width: 100%;
   height: 100%;
-  width: 50%;
-  transition: ease-out all 0.7s;
 }
-main div.forms > div .circle {
+main .container > div > div {
+  position: relative;
+  z-index: 2;
+}
+main .container > div > div.form {
+  width: calc(50% + var(--circle-space));
+  transition: all 0.7s ease;
+  transition-delay: 0.462s;
+}
+main .container > div > div.form .circle {
   position: fixed;
   bottom: 0;
   width: 30vh;
@@ -25,63 +35,19 @@ main div.forms > div .circle {
   opacity: 0.88;
   transition: all 0.7s ease;
 }
-main div.forms > div .alternative {
-  position: fixed;
-  z-index: 2;
-  width: 50%;
-}
-main div.forms > div .alternative .content {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: 100px;
-  margin-bottom: 2em;
-  gap: 5px;
-  text-align: center;
-}
-main div.forms > div .alternative .content p {
-  font-family: "Poppins-Regular";
-  font-size: 1.1rem;
-  color: var(--white);
-  text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.4);
-}
-main div.forms > div .alternative .content button {
-  margin-top: 1em;
-  border: 3px solid var(--white);
-  background: transparent;
-  font-family: "SourceSansPro-SemiBold";
-  font-size: 1rem;
-  color: var(--white);
-  width: 120px;
-  height: 36px;
-  border-radius: 18px;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  opacity: 1;
-}
-main div.forms > div .alternative .content button:hover, main div.forms > div .alternative .content button:focus {
-  opacity: 75%;
-}
-main div.forms > div .form-container {
+main .container > div > div.form .form-container {
   position: relative;
   width: 100%;
-  left: 0;
-  opacity: 1;
-  transition: ease-out all 0.7s;
 }
-main div.forms > div .form-container h1 {
+main .container > div > div.form .form-container h1 {
   font-family: "Poppins-Bold";
   margin-bottom: 0.6em;
   color: var(--black-2);
 }
-main div.forms > div .form-container .form-content {
+main .container > div > div.form .form-container .form-content {
   gap: 4px;
 }
-main div.forms > div .form-container .form-content .input-box {
+main .container > div > div.form .form-container .form-content .input-box {
   width: 250px;
   height: 44px;
   background: var(--white);
@@ -90,9 +56,8 @@ main div.forms > div .form-container .form-content .input-box {
   position: relative;
   margin: 10px 0;
   transition: all 0.4s;
-  /* Show input */
 }
-main div.forms > div .form-container .form-content .input-box input {
+main .container > div > div.form .form-container .form-content .input-box input {
   border: none;
   outline: none;
   background: none;
@@ -104,7 +69,7 @@ main div.forms > div .form-container .form-content .input-box input {
   transform: translateY(-3px);
   color: var(--black-3);
 }
-main div.forms > div .form-container .form-content .input-box input::-moz-placeholder {
+main .container > div > div.form .form-container .form-content .input-box input::-moz-placeholder {
   color: transparent;
   font-family: "SourceSansPro-Light";
   -moz-transition: all 0.4s;
@@ -112,7 +77,7 @@ main div.forms > div .form-container .form-content .input-box input::-moz-placeh
   -moz-user-select: none;
        user-select: none;
 }
-main div.forms > div .form-container .form-content .input-box input:-ms-input-placeholder {
+main .container > div > div.form .form-container .form-content .input-box input:-ms-input-placeholder {
   color: transparent;
   font-family: "SourceSansPro-Light";
   -ms-transition: all 0.4s;
@@ -120,7 +85,7 @@ main div.forms > div .form-container .form-content .input-box input:-ms-input-pl
   -ms-user-select: none;
       user-select: none;
 }
-main div.forms > div .form-container .form-content .input-box input::placeholder {
+main .container > div > div.form .form-container .form-content .input-box input::placeholder {
   color: transparent;
   font-family: "SourceSansPro-Light";
   transition: all 0.4s;
@@ -129,7 +94,7 @@ main div.forms > div .form-container .form-content .input-box input::placeholder
       -ms-user-select: none;
           user-select: none;
 }
-main div.forms > div .form-container .form-content .input-box label {
+main .container > div > div.form .form-container .form-content .input-box label {
   position: absolute;
   left: 5px;
   padding: 2px 3px;
@@ -139,7 +104,7 @@ main div.forms > div .form-container .form-content .input-box label {
   background: var(--white);
   transition: all 0.4s ease;
   font-family: "SourceSansPro-Regular";
-  /* Default hide */
+  /* Hide by default */
   animation: input-animate 0.4s ease reverse;
   top: 8px;
   font-size: 1rem;
@@ -148,29 +113,10 @@ main div.forms > div .form-container .form-content .input-box label {
       -ms-user-select: none;
           user-select: none;
 }
-main div.forms > div .form-container .form-content .input-box:hover {
+main .container > div > div.form .form-container .form-content .input-box:hover {
   border: 2px solid var(--black-3);
 }
-main div.forms > div .form-container .form-content .input-box.focused, main div.forms > div .form-container .form-content .input-box.complete {
-  border: 2px solid var(--secondary-color);
-}
-main div.forms > div .form-container .form-content .input-box.focused input::-moz-placeholder, main div.forms > div .form-container .form-content .input-box.complete input::-moz-placeholder {
-  color: var(--grey-3);
-}
-main div.forms > div .form-container .form-content .input-box.focused input:-ms-input-placeholder, main div.forms > div .form-container .form-content .input-box.complete input:-ms-input-placeholder {
-  color: var(--grey-3);
-}
-main div.forms > div .form-container .form-content .input-box.focused input::placeholder, main div.forms > div .form-container .form-content .input-box.complete input::placeholder {
-  color: var(--grey-3);
-}
-main div.forms > div .form-container .form-content .input-box.focused label, main div.forms > div .form-container .form-content .input-box.complete label {
-  -webkit-animation: input-animate 0.4s ease;
-          animation: input-animate 0.4s ease;
-  color: var(--secondary-color);
-  top: -12px;
-  font-size: 0.9rem;
-}
-main div.forms > div .form-container .form-content .input-box.input-password .password-visibility {
+main .container > div > div.form .form-container .form-content .input-box.input-password .password-visibility {
   position: absolute;
   right: 10px;
   border: none;
@@ -178,20 +124,39 @@ main div.forms > div .form-container .form-content .input-box.input-password .pa
   background: none;
   transition: all 0.4s linear;
   opacity: 0;
-  pointer-events: none;
   cursor: pointer;
   height: 20px;
 }
-main div.forms > div .form-container .form-content .input-box.input-password .password-visibility img {
+main .container > div > div.form .form-container .form-content .input-box.input-password .password-visibility img {
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
-main div.forms > div .form-container .form-content .input-box.input-password.focused .password-visibility, main div.forms > div .form-container .form-content .input-box.input-password.complete .password-visibility {
+main .container > div > div.form .form-container .form-content .input-box.focused, main .container > div > div.form .form-container .form-content .input-box.complete {
+  border: 2px solid var(--secondary-color);
+}
+main .container > div > div.form .form-container .form-content .input-box.focused input::-moz-placeholder, main .container > div > div.form .form-container .form-content .input-box.complete input::-moz-placeholder {
+  color: var(--grey-3);
+}
+main .container > div > div.form .form-container .form-content .input-box.focused input:-ms-input-placeholder, main .container > div > div.form .form-container .form-content .input-box.complete input:-ms-input-placeholder {
+  color: var(--grey-3);
+}
+main .container > div > div.form .form-container .form-content .input-box.focused input::placeholder, main .container > div > div.form .form-container .form-content .input-box.complete input::placeholder {
+  color: var(--grey-3);
+}
+main .container > div > div.form .form-container .form-content .input-box.focused label, main .container > div > div.form .form-container .form-content .input-box.complete label {
+  /* Show input */
+  -webkit-animation: input-animate 0.4s ease;
+          animation: input-animate 0.4s ease;
+  color: var(--secondary-color);
+  top: -12px;
+  font-size: 0.9rem;
+}
+main .container > div > div.form .form-container .form-content .input-box.focused .password-visibility, main .container > div > div.form .form-container .form-content .input-box.complete .password-visibility {
   opacity: 0.5;
   pointer-events: initial;
 }
-main div.forms > div .form-container .form-content .input-box.input-password.focused .password-visibility:hover, main div.forms > div .form-container .form-content .input-box.input-password.focused .password-visibility:focus, main div.forms > div .form-container .form-content .input-box.input-password.complete .password-visibility:hover, main div.forms > div .form-container .form-content .input-box.input-password.complete .password-visibility:focus {
+main .container > div > div.form .form-container .form-content .input-box.focused .password-visibility:hover, main .container > div > div.form .form-container .form-content .input-box.focused .password-visibility:focus, main .container > div > div.form .form-container .form-content .input-box.complete .password-visibility:hover, main .container > div > div.form .form-container .form-content .input-box.complete .password-visibility:focus {
   opacity: 85%;
 }
 @-webkit-keyframes input-animate {
@@ -214,12 +179,12 @@ main div.forms > div .form-container .form-content .input-box.input-password.foc
     font-size: 0.9rem;
   }
 }
-main div.forms > div .form-container .form-content .remember-me {
+main .container > div > div.form .form-container .form-content .checkbox-option {
   width: 100%;
   height: 30px;
   margin: 0.5em;
 }
-main div.forms > div .form-container .form-content .remember-me input {
+main .container > div > div.form .form-container .form-content .checkbox-option input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -233,7 +198,7 @@ main div.forms > div .form-container .form-content .remember-me input {
   overflow: hidden;
   box-shadow: 2px -2px 1px var(--white-3);
 }
-main div.forms > div .form-container .form-content .remember-me input::before {
+main .container > div > div.form .form-container .form-content .checkbox-option input::before {
   content: "";
   position: absolute;
   display: block;
@@ -243,7 +208,7 @@ main div.forms > div .form-container .form-content .remember-me input::before {
   background: rgba(51, 119, 238, 0.7333333333);
   transition: all 0.4s ease-in-out;
 }
-main div.forms > div .form-container .form-content .remember-me input::after {
+main .container > div > div.form .form-container .form-content .checkbox-option input::after {
   content: "";
   position: relative;
   display: block;
@@ -253,21 +218,21 @@ main div.forms > div .form-container .form-content .remember-me input::after {
   background: var(--white);
   left: 0;
   transition: all 0.4s ease-in-out;
-  transform: scale(80%);
+  transform: scale(0.8);
 }
-main div.forms > div .form-container .form-content .remember-me input:checked {
+main .container > div > div.form .form-container .form-content .checkbox-option input:checked {
   background: var(--white-1);
 }
-main div.forms > div .form-container .form-content .remember-me input:checked::before {
+main .container > div > div.form .form-container .form-content .checkbox-option input:checked::before {
   width: 100%;
 }
-main div.forms > div .form-container .form-content .remember-me input:checked::after {
+main .container > div > div.form .form-container .form-content .checkbox-option input:checked::after {
   left: 20px;
 }
-main div.forms > div .form-container .form-content .remember-me input:hover, main div.forms > div .form-container .form-content .remember-me input:focus {
+main .container > div > div.form .form-container .form-content .checkbox-option input:hover, main .container > div > div.form .form-container .form-content .checkbox-option input:focus {
   box-shadow: 2px -2px 1px var(--grey-1);
 }
-main div.forms > div .form-container .form-content .remember-me label {
+main .container > div > div.form .form-container .form-content .checkbox-option label {
   margin-left: 4px;
   font-family: "Poppins-Light";
   font-size: 0.9rem;
@@ -277,13 +242,13 @@ main div.forms > div .form-container .form-content .remember-me label {
       -ms-user-select: none;
           user-select: none;
 }
-main div.forms > div .form-container .form-content .remember-me label a {
+main .container > div > div.form .form-container .form-content .checkbox-option label a {
   cursor: help;
   font-family: "Arial";
   text-decoration: none;
   color: var(--secondary-color);
 }
-main div.forms > div .form-container .form-content .remember-me label a::after {
+main .container > div > div.form .form-container .form-content .checkbox-option label a::after {
   content: var(--c);
   display: block;
   position: absolute;
@@ -298,10 +263,10 @@ main div.forms > div .form-container .form-content .remember-me label a::after {
   background: var(--secondary-color);
   transition: all 0.4s ease;
 }
-main div.forms > div .form-container .form-content .remember-me label a:hover::after {
+main .container > div > div.form .form-container .form-content .checkbox-option label a:hover::after {
   opacity: 1;
 }
-main div.forms > div .form-container .form-content .submit-btn {
+main .container > div > div.form .form-container .form-content .submit-btn {
   border: none;
   outline: none;
   background: var(--secondary-color);
@@ -314,34 +279,34 @@ main div.forms > div .form-container .form-content .submit-btn {
   box-shadow: 3px -3px rgba(51, 119, 238, 0.6);
   transition: all 0.4s ease;
 }
-main div.forms > div .form-container .form-content .submit-btn .submit-content {
+main .container > div > div.form .form-container .form-content .submit-btn .submit-content {
   color: var(--white);
   font-size: 1rem;
-  font-family: "SourceSansPro-SemiBold";
+  font-family: "SourceSansPro-Bold";
   pointer-events: none;
 }
-main div.forms > div .form-container .form-content .submit-btn .loading {
+main .container > div > div.form .form-container .form-content .submit-btn .loading {
   position: relative;
   width: 100%;
   height: 100%;
   background: transparent;
 }
-main div.forms > div .form-container .form-content .submit-btn.submit {
+main .container > div > div.form .form-container .form-content .submit-btn.submit {
   cursor: progress;
 }
-main div.forms > div .form-container .form-content .submit-btn.submit .submit-content {
+main .container > div > div.form .form-container .form-content .submit-btn.submit .submit-content {
   display: none;
 }
-main div.forms > div .form-container .form-content .submit-btn.submit .loading {
+main .container > div > div.form .form-container .form-content .submit-btn.submit .loading {
   display: flex;
 }
-main div.forms > div .form-container .form-content .submit-btn.submit .loading img {
+main .container > div > div.form .form-container .form-content .submit-btn.submit .loading img {
   position: absolute;
   width: 25px;
   -webkit-animation: loading-animation 0.7s cubic-bezier(0.45, 0.155, 0.7, 1) infinite;
           animation: loading-animation 0.7s cubic-bezier(0.45, 0.155, 0.7, 1) infinite;
 }
-main div.forms > div .form-container .form-content .submit-btn.submit .loading img:nth-child(2) {
+main .container > div > div.form .form-container .form-content .submit-btn.submit .loading img:nth-child(2) {
   -webkit-animation-delay: 135ms;
           animation-delay: 135ms;
 }
@@ -361,7 +326,7 @@ main div.forms > div .form-container .form-content .submit-btn.submit .loading i
     transform: rotate(360deg);
   }
 }
-main div.forms > div .form-container .form-content .submit-btn::after {
+main .container > div > div.form .form-container .form-content .submit-btn::after {
   position: absolute;
   content: "";
   display: block;
@@ -373,134 +338,175 @@ main div.forms > div .form-container .form-content .submit-btn::after {
   transition: all 0.6s ease;
   transform: scale(102%);
 }
-main div.forms > div .form-container .form-content .submit-btn.submit, main div.forms > div .form-container .form-content .submit-btn:hover, main div.forms > div .form-container .form-content .submit-btn:focus {
+main .container > div > div.form .form-container .form-content .submit-btn.submit, main .container > div > div.form .form-container .form-content .submit-btn:hover, main .container > div > div.form .form-container .form-content .submit-btn:focus {
   box-shadow: 3px -3px rgba(51, 119, 238, 0.3333333333);
 }
-main div.forms > div .form-container .form-content .submit-btn.submit::after, main div.forms > div .form-container .form-content .submit-btn:hover::after, main div.forms > div .form-container .form-content .submit-btn:focus::after {
+main .container > div > div.form .form-container .form-content .submit-btn.submit::after, main .container > div > div.form .form-container .form-content .submit-btn:hover::after, main .container > div > div.form .form-container .form-content .submit-btn:focus::after {
   left: 0;
 }
-main div.forms > div.login {
-  left: 0;
+main .container > div > div.alternative {
+  height: calc(90% - var(--circle-space));
+  width: calc(45% - var(--circle-space));
+}
+main .container > div > div.alternative .content {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100px;
+  margin-bottom: 2em;
+  gap: 5px;
+  text-align: center;
+}
+main .container > div > div.alternative .content p {
+  font-family: "Poppins-Regular";
+  font-size: 1.1rem;
+  color: var(--white);
+  text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.4);
+}
+main .container > div > div.alternative .content button {
+  margin-top: 1em;
+  border: 3px solid var(--white);
+  background: transparent;
+  font-family: "SourceSansPro-SemiBold";
+  font-size: 1rem;
+  color: var(--white);
+  width: 120px;
+  height: 36px;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   opacity: 1;
 }
-main div.forms > div.login .circle {
+main .container > div > div.alternative .content button:hover, main .container > div > div.alternative .content button:focus {
+  background: var(--white);
+  color: var(--primary-color);
+}
+main .container > div.login {
+  z-index: initial;
+}
+main .container > div.login > div {
+  opacity: 1;
+}
+main .container > div.login > div.form {
+  left: 0;
+}
+main .container > div.login > div.form .circle {
   left: 0;
   border-radius: 0 100% 0 0;
   box-shadow: 0 -5px 15px 15px var(--white-1);
 }
-main div.forms > div.login .alternative {
+main .container > div.login > div.alternative {
   transition: 0.5s ease 350ms;
   right: 0;
   visibility: visible;
   opacity: 1;
 }
-main div.forms > div.register {
-  left: -6%;
+main .container > div.register {
+  z-index: -1;
+}
+main .container > div.register > div {
   opacity: 0;
 }
-main div.forms > div.register .form-container .form-content .input-box {
-  width: 300px;
+main .container > div.register > div.form {
+  left: -all 0.7s;
 }
-main div.forms > div.register .form-container .form-content .remember-me label a {
-  cursor: pointer;
+main .container > div.register > div.form .circle {
+  right: -30vh;
+  border-radius: 100% 0 0 0;
+  box-shadow: 8px -5px 15px 15px var(--white-1);
 }
-main div.forms > div.register .alternative {
+main .container > div.register > div.alternative {
   transition: 0.5s ease;
   left: 6%;
   visibility: hidden;
   opacity: 0;
 }
-main div.forms > div.register .circle {
-  right: -30vh;
-  border-radius: 100% 0 0 0;
-  box-shadow: 8px -5px 15px 15px #eee;
-}
-main div.forms > div button {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-main div.cache {
+main .cache {
   position: fixed;
   background: radial-gradient(circle at center, var(--primary-color) 0%, #fe8 85%);
   top: -100%;
-  left: 48%;
-  height: 200vh;
-  width: 200vh;
+  right: calc(-50% + var(--circle-space));
+  width: calc(200vh - var(--circle-space));
+  height: calc(200vh - var(--circle-space));
   transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) all 0.7s;
   border-radius: 50%;
   z-index: 1;
   box-shadow: -25px 20px 10px rgba(238, 238, 238, 0.5333333333);
 }
-main.register .forms .login .form-container {
-  left: 6%;
+main.register .container > div.login {
+  z-index: -1;
+}
+main.register .container > div.login > div {
   opacity: 0;
 }
-main.register .forms .login .alternative {
+main.register .container > div.login > div.form .circle {
+  left: -30vh;
+}
+main.register .container > div.login > div.alternative {
   transition: 0.5s ease;
   right: 6%;
   visibility: hidden;
-  opacity: 0;
 }
-main.register .forms .login .circle {
-  left: -30vh;
+main.register .container > div.register {
+  z-index: initial;
 }
-main.register .forms .register {
-  left: 0%;
+main.register .container > div.register > div {
   opacity: 1;
 }
-main.register .forms .register .circle {
+main.register .container > div.register > div.form .circle {
   right: 0;
 }
-main.register .forms .register .alternative {
+main.register .container > div.register > div.alternative {
   transition: 0.5s ease 350ms;
-  left: 0;
+  left: initial;
   visibility: visible;
-  opacity: 1;
 }
 main.register .cache {
-  left: -48%;
+  right: calc(50% - var(--circle-space));
   box-shadow: 25px 20px 10px rgba(238, 238, 238, 0.5333333333);
 }
-
-@media only screen and (max-width: 600px) {
-  main .forms {
-    flex-direction: column;
+@media only screen and (max-width: 750px) {
+  main {
+    overflow: none;
   }
-  main .forms .login {
-    width: 100%;
+  main .container > div {
+    flex-direction: column-reverse !important;
   }
-  main .forms .login .form-container {
-    width: 100%;
+  main .container > div > div {
+    width: 100% !important;
   }
-  main .forms .login .alternative {
-    top: 0;
-    left: 0;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    width: 100%;
-    padding-top: 1rem;
+  main .container > div > div.form {
+    height: calc(100% - 5em);
   }
-  main .forms .login .circle {
-    width: 30vw;
-    height: 30vw;
-  }
-  main .forms .register {
+  main .container > div > div.form .circle {
     display: none;
   }
-  main .cache {
-    --cache-size: max(200vw, 200vh);
-    width: var(--cache-size) !important;
-    height: var(--cache-size) !important;
-    top: calc(0px - var(--cache-size) + 10em) !important;
-    left: calc(var(--cache-size) / -2.65) !important;
+  main .container > div.login .alternative {
+    height: 7.5em;
   }
-  main.register .forms .login .form-container {
-    left: 0;
-    top: -6%;
+  main .container > div.login .alternative .content {
+    padding-top: 1rem;
+  }
+  main .container > div.register {
+    flex-direction: column !important;
+  }
+  main .container > div.register .alternative {
+    height: 7.5em;
+  }
+  main .container > div.register .alternative .content {
+    position: fixed;
+    bottom: -1rem;
+  }
+  main .cache {
+    top: calc(-200vh + 10em);
+    left: -100vh;
+    transform: translateX(57.5vw);
   }
   main.register .cache {
-    background: #000;
+    top: calc(100vh - 10em + 1rem);
   }
 }/*# sourceMappingURL=login.css.map */
